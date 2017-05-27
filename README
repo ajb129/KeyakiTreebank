@@ -1,0 +1,130 @@
+Keyaki Treebank (Version 1.0)
+=============================
+
+Thanks for your interest in the first release of the Keyaki Treebank.
+
+The Keyaki Treebank is a parsed corpus that aims to instantiate a coherent
+descriptive grammar of the Japanese language, allowing searches for
+a wide variety of grammatical phenomena.  More information about the
+corpus can be found on the project website:
+
+http://www.compling.jp/keyaki/
+
+
+Contents of this File
+=====================
+
+(A) Corpus format
+(B) Recovering the full data
+(C) Citation
+(D) Contributors
+(E) Changelog
+(F) Licence
+
+
+(A) Corpus Format
+=================
+
+Keyaki Treebank files are formatted to be compatible with CorpusSearch,
+see http://corpussearch.sourceforge.net/CS-manual/YourCorpus.html for
+details.
+
+
+(B) Recovering the full data
+============================
+
+The 'closed' folder contains annotations for data sourced from the
+following purchasable resources, which are required to reinstate words
+stripped off due to license issues:
+
+- Mainichi Shinbun 1995 CD-ROM data collection (the same set of data
+  as used by the Kyoto Text Corpus). Available from Nichigai Associates:
+  http://www.nichigai.co.jp/sales/mainichi/mainichi-data.html.
+
+- Corpus of Spontaneous Japanese (CSJ) DVD-ROM data
+  Available from http://pj.ninjal.ac.jp/corpus_center/csj/en/
+
+- Balanced Corpus of Comtemporary Written Japanese (BCCWJ) DVD edition
+  Available from http://pj.ninjal.ac.jp/corpus_center/bccwj/.
+
+- (SIDB) Simultaneous Interpretation Database
+  Available from http://sidb.jp/
+
+The full corpus is obtained by running the following commands:
+
+ ./scripts/collect_MAI_data -d MAINICHI_DIR
+ ./scripts/integrate_MAI_characters
+ ./scripts/integrate_CSJ_characters --source CSJ_DIR
+ ./scripts/integrate_BCCWJ_characters --source BCCWJ_DIR
+ ./scripts/integrate_SIDB_characters --source SIDB_DIR
+
+where:
+
+ 'MAINICHI_DIR' is the directory of the files of Mainichi Shinbun 1995.
+ 'CSJ_DIR' is the directory of the files of the CSJ DVD-ROM
+ 'BCCWJ_DIR' is the directory of the files of the BCCWJ DVD-ROM
+ 'SIDB_DIR' is the directory of the files of the SIDB
+
+In order to run these commands, you need Perl, Python, Gawk, Tregex
+(https://nlp.stanford.edu/software/tregex.shtml) and munge-trees
+(http://web.science.mq.edu.au/~mjohnson/Software.htm).
+
+For Tregex to work, stanford-tregex.jar should be placed into the
+same directory as this README file.
+
+The program for extracting texts from Mainichi
+Shinbun 1995 is from the Kyoto Corpus project
+(http://nlp.ist.i.kyoto-u.ac.jp/EN/index.php?Kyoto%20University%20Text%20Corpus).
+
+(C) Citation
+============
+
+When presenting research results taken from this treebank, please be
+sure to include a citation in the following form:
+
+Alastair Butler, Kei Yoshimoto, Shota Hiyama, Stephen Wright Horn,
+Iku Nagasaki, and Ai Kubota. 2017. The Keyaki Treebank Parsed Corpus,
+Version 1.0 (http://www.compling.jp/Keyaki/ accessed YYYY/MM/DD).
+
+
+(D) Contributors
+================
+
+Alastair Butler (National Institute for Japanese Language and Linguistics)
+Kei Yoshimoto (Tohoku University)
+Shota Hiyama (Tohoku University)
+Stephen Wright Horn (National Institute for Japanese Language and Linguistics)
+Iku Nagasaki (National Institute for Japanese Language and Linguistics)
+Ai Kubota (National Institute for Japanese Language and Linguistics)
+Makoto Orikasa (Sophia University)
+Ken Kishiyama (University of Tokyo)
+Noritugu Hayashi (University of Tokyo),
+Ruriko Otomo (University of Hong Kong)
+Tomoya Kosuge (Tohoku University)
+Shinya Okano (University of Tokyo)
+Yumiko Kinjo (National Institute for Japanese Language and Linguistics)
+Ryosuke Sato (Tohoku University)
+Yusuke Kubota (University of Tsukuba)
+Takumi Toda (Tohoku University)
+Tsaiwei Fang (Tohoku University)
+Yoshiko Ookubo (JSA)
+Y. Ueda (JSA)
+Kyoko Fujii (International Christian University)
+Ayumi Nobuki (International Christian University)
+Natsuha Katakura (Tohoku University)
+
+
+(E) Changelog
+=============
+
+Initial release (v1.0)
+
+
+(F) Licence
+===========
+
+This work is licensed under the Creative Commons Attribution
+4.0 International License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by/4.0/ or send a letter to
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+

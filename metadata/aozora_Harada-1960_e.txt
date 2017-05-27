@@ -1,0 +1,7 @@
+title: Die Verwandlung (Henshin)
+author: Kafka, Franz (translator: Harada, Yoshito)
+date: 1915 (1960)
+source: Kafka Zenshu; Aozora Bunko (http://www.aozora.gr.jp/cards/001235/card49866.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

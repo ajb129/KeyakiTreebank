@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+
+# 京都テキストコーパスに対する grep
+#
+# Usage: grepKNP.pl <pattern>
+
+use encoding 'euc-jp';
+use open IO => ':encoding(euc-jp)';
+use IPC::Open2;
+
+$CORPUS_DIR = "../dat/syn";
+
+$pattern = $ARGV[0];
+
+open2(IN, OUT, "ls $CORPUS_DIR/*.KNP") || die;
+close(OUT);
+
+while ( <IN> ) {
+    chomp;
+    open(DAT, $_);
+    while ( <DAT> ) {
+	if (/^EOS/) {
+	    $sentence .= $_;
+	    if ($sentence =~ /$pattern/ || $raw_sentence =~ /$pattern/) {
+		print $sentence;
+	    }
+	    $sentence = "";
+	    $raw_sentence = "";
+	} else {
+	    $sentence .= $_;
+	    if ($_ !~ /^(\#|\*)/) {
+		split; $raw_sentence .= shift(@_);
+	    }
+	}
+    }
+    close(DAT);
+}
+close(IN);

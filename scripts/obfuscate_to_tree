@@ -1,0 +1,123 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      obfuscate_to_tree - transform tree
+
+SYNOPSIS
+      obfuscate_to_tree filename
+
+DESCRIPTION
+      Filter to add words to an obfuscated tree. Information on the
+      words to add comes from a file given as a required argument
+      that has one character per line.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+
+}
+
+function example () {
+
+cat 1>&2 << END
+
+EXAMPLE
+      $ cat WORDS
+END
+
+TEMP=${TMP:-"/tmp"}/output_t$$
+
+cat > ${TEMP} << EWO
+授
+業
+が
+終
+わ
+る
+。
+EWO
+
+cat $0 | sed '1,/ << EWO$/d; /^EWO$/,$d' | sed 's/^/      > /' 1>&2
+
+cat 1>&2 << END
+      $ cat << EOF | obfuscate_to_tree WORDS | munge-trees -p
+END
+
+cat $0 | sed '1,/^cat << DEMO/d; /^DEMO$/,$d' | munge-trees -p | sed 's/^/      > /' 1>&2
+
+cat 1>&2 << END
+      > EOF
+END
+
+cat << DEMO | obfuscate_to_tree ${TEMP} | munge-trees -p | sed 's/^/      -| /' 1>&2
+( (IP-MAT (PP (NP (N ⛔⛔)) (P ⛔)) (NP-SBJ *が*) (VB ⛔⛔⛔) (PU ⛔)) (ID 7_textbook_kisonihongo;page_13;JP))
+DEMO
+
+rm ${TEMP}
+
+}
+
+function see_also () {
+
+cat 1>&2 << END
+
+SEE ALSO
+      tree_to_obfuscate(1)
+END
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --number)     # number all characters
+         NUMBER=1 ; shift ;;
+
+      --example)    # show an example
+         help_information
+         example
+         see_also
+         exit ;;
+
+      -*)           # show this help message
+         help_information
+         see_also
+         exit ;;
+
+      *)
+         FILE=$1 ; shift ;;
+  esac
+done
+
+######################
+# script starts here #
+######################
+
+tree_to_charactertree | \
+tree_to_table --basic | \
+gawk -v DATA=${FILE} '
+BEGIN {
+# remember data
+  while ((getline < DATA) > 0) {
+    n = split($0, part, "")
+    for (i = 1; i <= n; i++) { character[++count] = part[i] }
+  }
+  close(DATA)
+}
+
+$NF == "⛔" { print $0, character[++replace]; next }
+
+{ print }
+
+' | \
+table_to_tree | \
+charactertree_to_tree
+

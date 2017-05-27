@@ -1,0 +1,7 @@
+title: 同時通訳データベース (SIDB) Simultaneous Interpretation Database data
+date: 2004
+source: DTASF042_EJTRANS (Available from http://sidb.jp/).
+genre: spoken
+subcorpus: spoken CIAIR
+details: Hitomi Toyama, Shigeki Matsubara, Koichiro Ryu, Nobuo Kawaguchi, Yasuyoshi Inagaki. CIAIR Simultaneous Interpretation Corpus, Proceedings of the Oriental Chapter of the International Committee for the Co-ordination and Standardization of Speech Databases and Assessment Techniques for Speech Input/Output (Oriental COCOSDA), 2004.
+terms of use: Copyright CIAIR. All Rights Reserved.

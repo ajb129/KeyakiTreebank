@@ -1,0 +1,7 @@
+title: Balanced Corpus of Comtemporary Written Japanese (BCCWJ) data
+date: 2014
+source: PN1e_00017.xml (Available from http://pj.ninjal.ac.jp/corpus_center/bccwj/).
+genre: newswire
+subcorpus: BCCWJ data
+details: Kikuo Maekawa, Makoto Yamazaki, Toshinobu Ogiso, Takehiko Maruyama, Hideki Ogura, Wakako Kashino, Hanae Koiso, Masaya Yamaguchi, Makiro Tanaka, and Yasuharu Den. 2014. 'Balanced Corpus of Contemporary Written Japanese'. Language Resources and Evaluation 48(2), pp.345-371
+terms of use: National Institute for Japanese Language and Linguistics. All Rights Reserved.

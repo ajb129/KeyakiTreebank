@@ -1,0 +1,129 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      tsurgeon_script - pipeline tsurgeon
+
+SYNOPSIS
+      tsurgeon_script script
+
+DESCRIPTION
+      This wrapper script runs stanford-tregex.jar in the tsurgeon mode
+      as a filter changing stdin.  A tsurgeon script name must be supplied.
+
+      The character % introduces a comment that extends to the end of the
+      line.  All other intended uses of % must be escaped as \% .
+
+      Also lines that begin .R and end .E are commented out. It is not
+      necessary to close .R, in which case all lines are commented out
+      from the instance of .R to the end of the given script.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+}
+
+function see_also () {
+
+cat 1>&2 << END
+
+SEE ALSO
+      tregex(1), tsurgeon_script_animate(1)
+END
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --together)     # bring multiple daughters without a child together
+         TOGETHER=1 ; shift 1 ;;
+
+      -*)             # show this help message
+         help_information
+         see_also
+         exit ;;
+
+      *)              # file name from where to source the tsurgeon script content
+         INPUT="${INPUT} $1" ; shift ;;
+ 
+  esac
+done
+
+
+######################
+# script starts here #
+######################
+
+function possibly_place_sisters_together () {
+
+if test "${TOGETHER}"; then
+
+sed 's/ /\n/g; s/)/\n)/g' | \
+awk '
+
+NF==0 || /\(/ || /\)/ { printf("%s\n", $0) ; next }
+
+{ printf("%s", $0) }
+
+' | munge-trees -w
+
+else
+
+cat
+
+fi
+
+}
+
+
+TEMP=${TMP:-"/tmp"}/output_t1$$
+SCRIPT=${TMP:-"/tmp"}/output_t2$$
+
+# collect input
+cat > "${TEMP}"
+
+# ensure there is content to potentially alter
+if test $(cat "${TEMP}" | wc -l) -gt 0; then
+
+# establish location of stanford-tregex.jar
+TREGEX="$(dirname $0)/../stanford-tregex.jar"
+
+# if [ $OSTYPE = "cygwin" ]; then
+#   TREGEX=$(cygpath -w "${TREGEX}")
+#   INPUT=$(cygpath -w "${INPUT}")
+# fi
+
+# collect and comment script content
+cat ${INPUT} | awk '
+$1 ~ /^\.R/ { remove_all++ ; next }
+
+$1 ~ /^\.E/ { remove_all-- ; next }
+
+remove_all != 0	{ next }
+
+{ print }
+' > "${SCRIPT}"
+
+# simple cat when ther are no script commands
+if test $(cat "${SCRIPT}" | wc -l) -eq 0; then cat "${TEMP}"; else
+
+# run tsurgeon
+java -mx300m -cp "${TREGEX}" edu.stanford.nlp.trees.tregex.tsurgeon.Tsurgeon -treeFile "${TEMP}" "${SCRIPT}" -s | \
+possibly_place_sisters_together
+
+rm "${SCRIPT}"
+
+fi
+
+fi
+
+rm "${TEMP}"
+

@@ -1,0 +1,195 @@
+#!/bin/bash
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      extract_data - access parsed data
+
+SYNOPSIS
+      extract_data dir
+      extract_data dir i
+      extract_data dir i j
+      extract_data dir pattern
+      extract_data dir pattern j
+
+DESCRIPTION
+      Allows easy access to the content of all (CorpusSearch parsed)
+      files with .psd extension in directory dir. Returned trees include
+      ID tags by default.
+
+      Directory name dir must be supplied, followed optionally by one
+      or two numbers, i and j respectively, or else by a pattern that
+      is with or without a number j.
+
+      With no numbers or pattern, a numbered list of all the .psd file
+      goes to stdout.
+
+      With i supplied, the content of the i-th .psd file goes to stdout.
+
+      With a pattern supplied, the content of all files with names that
+      contain pattern goes to stdout.
+
+      With i and j supplied, the j-th tree of the i-th .psd file goes
+      to stdout.
+
+      With pattern and j supplied, the j-th tree of each file with a
+      name containing pattern goes to stdout.
+
+      j can also be a range of numbers. For example, the command
+
+        extract_data dir 2 3,7
+
+      will send to stdout trees 3 to 7 of the 2nd *.psd file in dir.
+
+      Selecting non consecutive examples is also possible. For example
+     
+        extract_data dir 2 "3p;7"
+
+      will send to stdout trees 3 and 7 (but not trees 4-6) of the 2nd
+      .psd file in dir.
+
+      Also,
+
+        extract_data dir 2 "3p;3p;3"
+
+      will send to stdout three instances of tree 3
+     
+      There are further options:
+     
+           -v,--edit         (for quick editing access)
+           -id,--id          (to return the example id only)
+           -ptb,--ptb        (to return the example with ID removed and
+                              given TOP as root node)
+     
+      For example
+     
+        extract_data dir 4 6 --edit
+     
+      will open an editor (vim) at the point of tree 6 in the 4th .psd
+      file of dir.
+
+      To work this script requires munge-trees.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+
+}
+
+# trigger help with no parameters
+if test $# -eq 0; then
+  help_information
+  exit
+fi
+
+######################
+# collect parameters #
+######################
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --extension|-e)  # specify extension name of source data, e.g., --extension mrg (default psd)
+        EXTENSION=$2 ; shift 2 ;;
+
+      --data|--dir)    # specify data location
+         DIR=$2 ; shift 2 ;;
+
+      --edit)          # echo edit number and file command
+         EDIT=1 ; shift ;;
+
+      --look)          # collect words
+         LOOK="${LOOK}$2" ; DO1=1 ; shift 2 ;;
+
+      -*)              # show this help message
+         help_information
+         exit ;;
+
+      [0-9]*)          # collect numbers
+if test ${DO1}; then
+  NUM2="${NUM2} $1" ; DO2=1
+else
+  NUM1="$1" ; DO1=1
+fi ; shift ;;
+
+      *)               # collect words
+         LOOK="${LOOK}$1" ; DO1=1 ; shift ;;
+
+  esac
+done
+
+######################
+# script starts here #
+######################
+
+######### print out dir contents
+if ! test "${DO1}"; then
+
+find ${DIR} -type f -print | \
+if test ${EXTENSION}; then
+  grep ".${EXTENSION}\$"
+else
+  cat
+fi | \
+LC_ALL=UTF-8 sort | awk '{ print NR, gensub(/^.*\//, "", 1, $0) }'
+
+exit
+
+fi
+
+######### filter dir contents with LOOK
+if test "${LOOK}"; then
+
+DATA=$(find ${DIR} -type f -print | \
+if test ${EXTENSION}; then
+  grep ".${EXTENSION}\$"
+else
+  cat
+fi | \
+LC_ALL=UTF-8 sort | egrep "${LOOK}")
+
+######### filter dir contents with NUM1
+elif test "{NUM1}"; then
+
+DATA=$(find ${DIR} -type f -print | \
+if test ${EXTENSION}; then
+  grep ".${EXTENSION}\$"
+else
+  cat
+fi | \
+LC_ALL=UTF-8 sort | sed -n "${NUM1}"p)
+
+fi
+
+#### do not continue if there is no data
+if ! test "$DATA"; then
+  exit
+fi
+
+#### show location
+if test ${EDIT}; then
+  for i in ${DATA}; do
+    if ! test ${NUM2}; then
+      echo "$i"
+    else
+      BEGIN=$(echo ${NUM2} | sed 's/,.*//')
+      echo "vim +/\\s${BEGIN}_ ${i}"
+    fi
+  done
+else
+
+#### show data
+  for i in ${DATA}; do
+    if ! test ${NUM2}; then
+      cat $i
+    else
+      BEGIN=$(echo ${NUM2} | sed 's/,.*//')
+      END=$(echo ${NUM2} | sed 's/^[^,]*,//')
+      cat $i | select_data ${BEGIN} ${END}
+    fi
+  done
+
+fi
+

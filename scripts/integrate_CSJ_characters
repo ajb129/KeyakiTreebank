@@ -1,0 +1,132 @@
+#!/bin/bash
+
+################################################
+# set default parameters
+
+PATH=$(dirname $0):${PATH}
+
+BASE_DIR=$(dirname $0)/..
+ANNOTATION=${BASE_DIR}/closed
+DESTINATION=${BASE_DIR}/treebank
+
+
+################################################
+# collect command line given parameter values
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --diff)
+         DIFF=1 ; shift 1 ;;
+
+      --meld)
+         MELD=1 ; DIFF=1 ; shift 1 ;;
+
+      --data)
+         DATA="${DATA} $2" ; shift 2 ;;
+
+      --source)
+         SOURCE="$2" ; shift 2 ;;
+
+      --annotation)
+         ANNOTATION="$2" ; shift 2 ;;
+
+      --destination)
+         DESTINATION="$2" ; shift 2 ;;
+
+      *) echo "$1 is not an option."; exit ;;
+
+  esac
+done
+
+
+################################################
+# check there are directories
+
+if test ! "${SOURCE}"; then
+  echo "A source directory needs to be specified with the --source flag."
+  exit
+fi
+
+if test ! -d "${SOURCE}"; then
+  echo "The script cannot complete."
+  echo "There is no \"${SOURCE}\" directory."
+  exit
+fi
+
+if test ! ${DIFF}; then
+  if test ! -d "${ANNOTATION}"; then
+    echo "The script cannot complete."
+    echo "There is no \"${ANNOTATION}\" directory."
+    exit
+  fi
+  if test ! -d "${DESTINATION}"; then
+    echo "The script cannot complete."
+    echo "There is no \"${DESTINATION}\" directory."
+    exit
+  fi
+fi
+
+
+################################################
+# determine DATA
+
+if test ! "${DATA}"; then
+  DATA="S00F0014_CU S00F0031_CU S00F0041_CU S00F0066_CU S00F0082_CU S02M1698_CU S03F0062_CU S03F0072_CU S03F0108_CU S03F0133_CU S03F0184_CU S03F0224_CU S03F0232_CU S03F0314_CU S03F0383_CU S03F1477_CU S03F1577_CU S03M0003_CU S03M0046_CU S03M0106_CU S03M0141_CU S03M0201_CU S03M0317_CU S03M0996_CU S03M1133_CU S04F1495_CU S05F0463_CU S05F1041_CU S05F1517_CU S05M1236_CU S05M1505_CU S05M1666_CU S06F0167_CU S06F1566_CU S06M0373_CU S06M0894_CU S06M0895_CU S07M0833_CU"
+fi
+
+
+################################################
+# parts
+
+function character_per_line () {
+  awk -v NAME=$1 '{ n = split($0, parts, "") ; for (i = 1; i <= n; i++) { print parts[i], ++num, NAME } }' 
+}
+
+
+################################################
+# main script
+
+for i in ${DATA}; do
+  TEMP1="${TMP:-/tmp}/output_source_${i}"
+  TEMP2="${TMP:-/tmp}/output_annotated_${i}"
+  ##
+  extract_data --extension ".xml" --dir "${SOURCE}" --look "${i}" | \
+  sed '
+s/"エルディーケー;２ＬＤＫ)"/"２ＬＤＫ"/
+
+/<SUW ColumnID="001" Dep_BunsetsuUnitID="3" Dep_ModifieeBunsetsuUnitID="7" OrthographicTranscription="(A 千"/d
+/<SUW ColumnID="006" OrthographicTranscription="九百" PhoneticTranscription="キューヒャク"/d
+/<SUW ColumnID="010" OrthographicTranscription="七十" PhoneticTranscription="ナナジュー"/d
+s/<SUW ColumnID="014" OrthographicTranscription="七;１９７７)"/<SUW ColumnID="014" OrthographicTranscription="１９７７"/
+
+/<SUW ColumnID="001" Dep_BunsetsuUnitID="8" Dep_ModifieeBunsetsuUnitID="9" Dep_ObligateComment="B+" OrthographicTranscription="(A 千"/d
+/<SUW ColumnID="006" OrthographicTranscription="九百" PhoneticTranscription="キューヒャク" PlainOrthographicTranscription="九百"/d
+/<SUW ColumnID="010" OrthographicTranscription="八十" PhoneticTranscription="ハチジュー" PlainOrthographicTranscription="八十"/d
+s/<SUW ColumnID="014" OrthographicTranscription="五;１９８５)"/<SUW ColumnID="014" OrthographicTranscription="１９８５)"/
+
+' | \
+  CSJ_to_BCCWJ | \
+  BCCWJ_to_unidic | \
+  awk '{ print $1 }' | \
+  grep -v "EOS" | \
+  character_per_line ${i} > ${TEMP1}
+  ##
+  if test ${DIFF}; then
+    Keyaki "${i}" | yield -j | character_per_line "${i}" > ${TEMP2}
+    if test "${MELD}"; then
+      meld ${TEMP1} ${TEMP2}
+    else
+      diff ${TEMP1} ${TEMP2}
+    fi
+  else
+    echo "${i}"
+    cat ${TEMP1} | awk '{ print $1 }' > ${TEMP2}
+    extract_data --extension ".psd" --dir "${ANNOTATION}" --look "${i}" | \
+    obfuscate_to_tree ${TEMP2} | \
+    munge-trees -p | \
+    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}" | awk '{ print $2 }')"
+  fi
+  rm ${TEMP1} ${TEMP2}
+done
+

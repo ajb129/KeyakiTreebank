@@ -1,0 +1,77 @@
+#!/bin/bash
+
+DIR="$(dirname $0)"
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      BCCWJ_to_unidic - convert M-XML to UNIDIC mecab analysis
+
+SYNOPSIS
+      BCCWJ_to_unidic [OPTIONS]
+
+DESCRIPTION
+      Filter that takes files in the M-XML (morphology-based XML) format
+      of the BCCWJ that contains both the document structure information
+      and the results of dual POS analysis and returns the POS analysis
+      in UNIDIC mecab format.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+
+}
+
+function example () {
+
+EXAMPLE=${DIR}/Comainu_example.txt
+
+cat 1>&2 << END
+
+EXAMPLE
+      cat << EOF | BCCWJ_to_unidic
+END
+
+cat "${EXAMPLE}" | Comainu_to_BCCWJ | sed 's/^/      /' 1>&2
+
+cat 1>&2 << END
+      EOF
+END
+
+cat "${EXAMPLE}" | Comainu_to_BCCWJ | $0 | sed 's/^/      /' 1>&2
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --example)  # show an example
+         help_information
+         example
+         exit ;;
+
+      *)          # show this help message
+         help_information
+         exit ;;
+
+  esac
+done
+
+######################
+# script starts here #
+######################
+
+sed '
+s@<quote>@@g
+s@</quote>@@g
+' | \
+xmllint --noblanks - | \
+xsltproc "${DIR}/BCCWJ_to_unidic.xsl" - | \
+sed '/^ \t\t/d'
+

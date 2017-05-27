@@ -1,0 +1,6 @@
+title: Wikipedia article
+date: 2013/10/31
+source: 上海市-Wikipedia.html
+genre: Wikipedia
+subcorpus: Wikipedia general
+terms of use: Creative Commons Attribution-ShareAlike License 3.0

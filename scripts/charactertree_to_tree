@@ -1,0 +1,91 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      charactertree_to_tree - transform tree
+
+SYNOPSIS
+      charactertree_to_tree
+
+DESCRIPTION
+      Filter to collapse the nodes of a character tree.
+
+OPTIONS
+END
+
+cat $0 | grep "( *\# " 1>&2
+
+}
+
+function example () {
+
+cat 1>&2 << END
+
+EXAMPLE
+      $ cat << EOF | charactertree_to_tree | munge-trees
+END
+
+cat $0 | sed '1,/^cat << DEMO/d; /^DEMO$/,$d' | munge-trees -p | sed 's/^/      > /' 1>&2
+
+cat 1>&2 << END
+      > EOF
+END
+
+cat << DEMO | charactertree_to_tree | munge-trees -p | sed 's/^/      -| /' 1>&2
+( (IP-MAT (PP (NP (N (+ 授) (+ 業))) (P (+ が))) (NP-SBJ *が*) (VB (+ 終) (+ わ) (+ る)) (PU (+ 。))) (ID 7_textbook_kisonihongo;page_13;JP))
+DEMO
+
+}
+
+function see_also () {
+
+cat 1>&2 << END
+
+SEE ALSO
+      tree_to_charactertree(1)
+END
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --example)    # show an example
+         help_information
+         example
+         see_also
+         exit ;;
+
+      *)            # show this help message
+         help_information
+         see_also
+         exit ;;
+
+  esac
+done
+
+######################
+# script starts here #
+######################
+
+TSCRIPT=${TMP:-"/tmp"}/output_tscript$$
+
+# create tsurgeon script for collapsing characters back to words
+cat > "${TSCRIPT}" << EOF
+/^\+\$/=x < (__ !< __)
+
+excise x x
+
+EOF
+
+$(dirname $0)/tsurgeon_script "${TSCRIPT}" --together
+
+# clean things up
+rm "${TSCRIPT}"
+

@@ -1,0 +1,7 @@
+title: Kaze no Mata Saburo
+author: Miyazawa, Kenji
+date: 1934
+source: Miyazawa Kenji Zenshu; Aozora Bunko (http://www.aozora.gr.jp/cards/000081/card462.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

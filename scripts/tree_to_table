@@ -1,0 +1,178 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      tree_to_table - convert trees to tabular format
+
+SYNOPSIS
+      tree_to_table
+
+DESCRIPTION
+      Filter to convert trees to a tabular format that orients tree
+      structure around parts-of-speech nodes. Blank lines separate
+      tabular trees.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+
+}
+
+function example () {
+
+cat 1>&2 << END
+
+EXAMPLE
+      $ cat << EOF | tree_to_table
+END
+
+cat $0 | sed '1,/^cat << DEMO/d; /^DEMO$/,$d' | munge-trees -p | sed 's/^/      > /' 1>&2
+
+cat 1>&2 << END
+      > EOF
+END
+
+cat << DEMO | $0 | sed 's/^/      -| /' 1>&2
+(TOP (IP-MAT (NP-SBJ (D The) (ADJ quick) (ADJ brown) (N fox)) (VBD jumped) (PP (P over) (NP (D the) (ADJ lazy) (N dog))) (. .)))
+DEMO
+
+}
+
+function see_also () {
+
+cat 1>&2 << END
+
+SEE ALSO
+      tree_to_pos(1), table_to_tree(1)
+END
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --overt)     # number only overt words
+         OVERT=1 ; shift ;;
+
+      --pad)       # word number output should be padded with zeros
+         PAD=1 ; shift ;;
+
+      --basic)     # output without word numbering
+         BASIC=1 ; shift ;;
+
+      --example)   # show an example
+         help_information
+         example
+         see_also
+         exit ;;
+
+      *)           # show this help message
+         help_information
+         see_also
+         exit ;;
+
+  esac
+done
+
+######################
+# script starts here #
+######################
+
+DIR="$(dirname $0)"
+
+munge-trees -w | tsurgeon_script "${DIR}/remove_leaves.tsurgeon" | sed 's/ (/♔(/g; s/_/♕/g; s/\*/＊/g' | gawk '
+
+{
+
+for (i = 1; i <= NF; i++) {
+  if (i == 1) {
+
+    if ($i ~ /^\([^♔(]*$/) {
+      before = ""
+    }
+    else {
+      before = gensub(/♔\([^(]*$/, "", 1, $i) "♔"
+    }
+
+    nparts = split ($i, parts, "(")
+    cat = parts[nparts]
+  }
+  else {
+    nparts = split ($i, parts, "(")
+    split (parts[1], word, ")")
+    split ($i, last, ")♔")
+
+    after = gensub(/^[^)]*/, "", 1, last[1])
+
+    if (i == NF) after = gensub(/\)$/, "", 1, after)
+
+    printf("%s*%s %s %s\n", before, after, cat, word[1])
+
+    if (last[2] ~ /^\([^♔(]*$/) {
+      before = ""
+    }
+    else {
+      before = gensub(/♔\([^(]*$/, "", 1, last[2]) "♔"
+    }
+
+    cat = parts[nparts]
+  }
+}
+
+  printf "\n"
+}
+
+' | awk -v PAD=${PAD} -v OVERT=${OVERT} '
+
+BEGIN {
+  RS = ""; FS = "\n"; ORS = "\n\n"
+}
+
+{
+word=0
+
+for (i = 1; i <= NF; i++)
+{
+  split($i, entry, " ")
+
+  if ((OVERT && entry[3] ~ /^\*/ && entry[3] ~ /\*[-0-9]*$/) || \
+      (OVERT && entry[3] ~ /^0$/ && entry[2] !~ /NUM/) \
+     ) {
+    if (PAD) {
+     printf("%s %s @%04d %s\n", entry[1], entry[2], sentence, entry[3])
+    }
+    else {
+     printf("%s %s @%d %s\n", entry[1], entry[2], sentence, entry[3])
+    }
+  } else {
+    if (PAD) {
+     printf("%s %s @%04d_%04d %s\n", entry[1], entry[2], sentence, word, entry[3])
+    }
+    else {
+     printf("%s %s @%d_%d %s\n", entry[1], entry[2], sentence, word, entry[3])
+    }
+  word++
+  }
+}
+
+printf "\n"
+
+sentence++
+
+}
+
+' | \
+if test "${BASIC}"; then
+  awk 'NF == 0 { print ; next } ; { print $1, $2, $4 }'
+else
+  cat
+fi | \
+sed 's/♔//g' #| sed 's/♕/_/g; s/＊/*/g'
+

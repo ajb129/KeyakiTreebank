@@ -1,0 +1,7 @@
+title: Corpus of Spontaneous Japanese (CSJ) data
+date: 2003
+source: S06M0895_CU.xml (Available from http://pj.ninjal.ac.jp/corpus_center/csj/en/).
+genre: spoken
+subcorpus: CSJ data
+details: Maekawa, K., 'Corpus of Spontaneous Japanese: Its design and evaluation'. Proceedings of the ISCA & IEEE Workshop on Spontaneous Speech Processing and Recognition (SSPR2003), Tokyo, 2003.
+terms of use: National Institute for Japanese Language and Linguistics. All Rights Reserved.

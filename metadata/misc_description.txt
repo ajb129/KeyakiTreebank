@@ -1,0 +1,4 @@
+title: description
+genre: example
+subcorpus: misc
+terms of use: Public domain

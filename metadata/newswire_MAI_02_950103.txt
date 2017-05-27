@@ -1,0 +1,6 @@
+title: Mainichi Shinbun 1995 CD-ROM data
+date: 1995
+source: KN950103 (Available from Nichigai Associates: http://www.nichigai.co.jp/sales/mainichi/mainichi-data.html).
+genre: newswire
+subcorpus: newswire Mainichi
+terms of use: Copyright (c) 2009, Nichigai Associates, Inc. All Rights Reserved.

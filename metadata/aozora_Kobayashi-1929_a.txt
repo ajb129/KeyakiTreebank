@@ -1,0 +1,7 @@
+title: Kani kosen
+author: Kobayashi, Takiji
+date: 1929
+source: Senki; Aozora Bunko (http://www.aozora.gr.jp/cards/000156/card1465.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

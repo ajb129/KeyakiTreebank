@@ -1,0 +1,100 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+[ $# -gt 0 ] && {
+
+cat 1>&2 << END
+NAME
+      CSJ_to_BCCWJ - convert CSJ XML into BCCWJ M-XML
+
+SYNOPSIS
+      CSJ_to_BCCWJ
+
+DESCRIPTION
+      Filter that takes CSJ XML content and returns BCCWJ M-XML
+      (morphology-based XML) format.
+
+END
+
+exit 0
+}
+
+######################
+# script starts here #
+######################
+
+DIR=$(dirname $0)
+
+xmllint --noblanks - | \
+xsltproc "${DIR}/CSJ_to_BCCWJ.xsl" - | \
+sed '
+s/&lt;[[:alnum:]:.-]\+&gt;//g
+
+s/(A)//g
+s/(W)//g
+s/(F)//g
+s/(?)//g
+s/(D)//g
+s/(D[0-9])//g
+s/(R)//g
+s/(L)//g
+s/(M)//g
+s/(O)//g
+s/(B)//g
+s/(笑)//g
+
+s/(A [^;]*;\([^)]*\))/\1/g
+s/(W [^;]*;\([^)]*\))/\1/g
+s/(F \([^)]*\))/\1/g
+s/(? \([^)]*\))/\1/g
+s/(D \([^)]*\))/\1/g
+s/(D[0-9] \([^)]*\))/\1/g
+s/(R \([^)]*\))/\1/g
+s/(L \([^)]*\))/\1/g
+s/(M \([^)]*\))/\1/g
+s/(O \([^)]*\))/\1/g
+s/(B \([^)]*\))/\1/g
+s/(笑 \([^)]*\))/\1/g
+
+s/(A [^;]*;\([^"]*\)"/\1"/g
+s/(W [^;]*;\([^"]*\)"/\1"/g
+s/(F \([^"]*\)"/\1"/g
+s/(? \([^"]*\)"/\1"/g
+s/(D \([^"]*\)"/\1"/g
+s/(D[0-9] \([^"]*\)"/\1"/g
+s/(R \([^"]*\)"/\1"/g
+s/(L \([^"]*\)"/\1"/g
+s/(M \([^"]*\)"/\1"/g
+s/(O \([^"]*\)"/\1"/g
+s/(B \([^"]*\)"/\1"/g
+s/(笑 \([^"]*\)"/\1"/g
+
+s/)"/"/g
+
+' | \
+awk 'NF > 0' | \
+sed 's@&lt;@<@g; s@&gt;@>@g; s/  */ /g; s/^ //' | \
+awk ' { printf("%s%s", NR == 1 ? "" : " ", $0) } ; END { printf("\n") } ' | \
+xmllint --format - | \
+sed '
+s/> \([^<]*\) </>\1</g
+
+s/(A //g
+s/(W //g
+s/(F //g
+s/(? //g
+s/(D //g
+s/(D[0-9] //g
+s/(R //g
+s/(L //g
+s/(M //g
+s/(O //g
+s/(B //g
+s/(笑 //g
+
+s/[)]*)</</g
+'
+

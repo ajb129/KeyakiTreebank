@@ -1,0 +1,7 @@
+title: Hashire Merosu
+author: Dazai, Osamu
+date: 1940 
+source: Shincho, May edition; Aozora Bunko (http://www.aozora.gr.jp/cards/000035/card1567.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

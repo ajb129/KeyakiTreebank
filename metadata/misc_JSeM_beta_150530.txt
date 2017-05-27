@@ -1,0 +1,7 @@
+title: Japanese Semantics Test Suite (JSeM) beta data
+date: 2015/4/15
+source: Available from http://researchmap.jp/community-inf/JSeM
+genre: example
+subcorpus: JSeM data
+details: Ai Kawazoe, Ribeka Tanaka, Koji Mineshima, Daisuke Bekki (2015) "An Inference Problem Set for Evaluating Semantic Theories and Semantic Processing Systems for Japanese," Proceedings of the Twelfth International Workshop on Logic and Engineering of Natural Language Semantics (LENLS12).
+terms of use: Public domain

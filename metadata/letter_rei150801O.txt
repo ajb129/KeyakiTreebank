@@ -1,0 +1,6 @@
+title: open letter
+date: 2015/08/03
+source: http://www.compling.jp/kei/150801Orei.html
+genre: letter
+subcorpus: misc
+terms of use: Public domain

@@ -1,0 +1,445 @@
+#!/bin/bash
+
+################################################
+# set default parameters
+
+PATH=$(dirname $0):${PATH}
+
+BASE_DIR=$(dirname $0)/..
+ANNOTATION=${BASE_DIR}/closed
+DESTINATION=${BASE_DIR}/treebank
+
+
+################################################
+# collect command line given parameter values
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --diff)
+         DIFF=1 ; shift 1 ;;
+
+      --meld)
+         MELD=1 ; DIFF=1 ; shift 1 ;;
+
+      --data1999)
+         DATA1999="${DATA1999} $2" ; shift 2 ;;
+
+      --data2002)
+         DATA2002="${DATA2002} $2" ; shift 2 ;;
+
+      --source)
+         SOURCE="$2" ; shift 2 ;;
+
+      --annotation)
+         ANNOTATION="$2" ; shift 2 ;;
+
+      --destination)
+         DESTINATION="$2" ; shift 2 ;;
+
+      *) echo "$1 is not an option."; exit ;;
+
+  esac
+done
+
+
+################################################
+# check there are directories
+
+if test ! "${SOURCE}"; then
+  echo "A source directory needs to be specified with the --source flag."
+  exit
+fi
+
+if test ! -d "${SOURCE}"; then
+  echo "The script cannot complete."
+  echo "There is no \"${SOURCE}\" directory."
+  exit
+fi
+
+if test ! ${DIFF}; then
+  if test ! -d "${ANNOTATION}"; then
+    echo "The script cannot complete."
+    echo "There is no \"${ANNOTATION}\" directory."
+    exit
+  fi
+  if test ! -d "${DESTINATION}"; then
+    echo "The script cannot complete."
+    echo "There is no \"${DESTINATION}\" directory."
+    exit
+  fi
+fi
+
+
+################################################
+# determine DATA
+
+if test "${DATA1999}" -o "${DATA2002}"; then
+  true
+else
+  DATA1999="DTASF006 DTASF007 DTASF042 DTASF043 DTASF056 DTASF057 DTASF092 DTASF093 DTBSF009 DTBSF059 DTBSF076 DTBSF091 DTCSF008 DTCSF044 DTCSF058 DTCSF090 DTCST014 DTDSF020 DTDSF041 DTDSF094 DTDST053 DTDST067 DTEST001 DTEST013 DTEST016 DTEST051 DTEST052 DTEST082 DTEST088 DTFST002 DTFST065 DTFST066 DTFST080 DTFST081 DTFST089 DTGST032 DTGST033 DTGST102 DTGST103 DTHSF040 DTHSF075 DTHSF086 DTJSF010 DTJSF021 DTJSF022 DTJSF060 DTJSF061 DTJSF072 DTJSF073 DTJSF095 DTJSF096 DTKSF023 DTKSF074 DTKSF085 DTKSF097 DTLST015 DTLST030 DTLST031 DTLST068 DTLST069 DTLST079 DTLST087 DTLST100 DTLST101"
+  DATA2002="DTFPT001 DTFPT001 DTFPT002 DTFPT002 DTFPT003 DTFPT003 DTFPT004 DTFPT004 DTFPT005 DTFPT005 DTFPT006 DTFPT006 DTFPT010 DTFPT010 DTFPT011 DTFPT011 DTFPT012 DTFPT012 DTFPT013 DTFPT013 DTFPT014 DTFPT014 DTFPT015 DTFPT015 DTFPT019 DTFPT019 DTFPT020 DTFPT020"
+fi
+
+################################################
+# parts
+
+function ciair_to_trn () {
+  awk -v NAME=$1 '
+
+NR == 1 { printf ("%%ｹﾖｱ飆D:%s\n%%\n%%<SOT>", NAME) }
+
+/^[0-9][0-9]* - / {
+
+ split($3, parts, "-")
+ split(parts[1], from, ":")
+ split(parts[2], until, ":")
+
+ # label = sprintf ("%s %05d.%s-%05d.%s L:", $1, (from[1] * 60) + from[2], from[3], (until[1] * 60) + until[2], until[3])
+ label = sprintf ("%s %05d.%s-%05d.%s R:", $1, (from[1] * 60) + from[2], from[3], (until[1] * 60) + until[2], until[3])
+ next
+}
+
+{
+  if (label) {
+    printf ("\n%s\n", label)
+    printf $0
+    label = ""
+  }
+  else {
+    printf (" & %s", $0)
+  }
+}
+
+END { printf ("\n%%<EOT>\n") }
+
+'
+
+}
+
+function extract_trn_sentences () {
+
+grep -v "^[0-9][0-9][0-9][0-9]" | grep -v "^%" | \
+sed '
+
+# DTBSF091_JTRANS
+s/(笑 (A 六三七二;６３７２)です<SB> & (笑 ロクサンナナニ)デス<SB>/６３７２です/
+
+# DTFPT019_EJTRANS
+s/^(F え)(A ゼロゼロ一 & (F エ)ゼロゼロイチ/え/
+s/^七八二四;００１７８２４) & ナナハチニーヨン/００１７８２４/
+
+# DTFPT002_EJTRANS
+s/^三四五八;００１３４５８) & サンヨンゴーハチ$/００１３４５８/
+
+# DTFPT003_JTRANS
+/^(A ケーアイ & ケーアイ$/d
+/^ワイオー & ワイオー$/d
+s/^エムアイ;ＫＩＹＯＭＩ)<SB> & エムアイ<SB>$/ＫＩＹＯＭＩ/
+s/^(F えー)(A ティー & (F エー)ティー$/えー/
+/^エー & エー$/d
+/^ケー & ケー$/d
+/^エー & エー$/d
+/^エイチ & エイチ$/d
+/^アイ & アイ$/d
+/^エス & エス$/d
+s/^エイチアイ;ＴＡＫＡＨＩＳＨＩ)<SB> & エイチアイ<SB>$/ＴＡＫＡＨＩＳＨＩ/
+
+# DTLST031_JTRANS
+s/^(雑音 (S 私)<I> & (雑音 (S ワタクシ))<I>$/私/
+
+# DTFPT020_JTRANS
+s/^(F えと)(W トリプルーム & (F エト)(W トリプルーム/えとトリプルーム/
+s/^ルーム;トリプルルーム)のほうは & ルーム;トリプルルーム)ノホーワ/のほうは/
+s/^電話番号のほう(A ゼロゼロ一の四六一一の & デンワバンゴーノホーガゼロゼロイチノヨンロクイチイチノ/電話番号のほう/
+s/^七八九一;００１−４６１１−７８９１)<SB> & ナナハチキューイチ<SB>/００１−４６１１−７８９１/
+
+# DTFPT010_EJTRANS
+/^(A ゼロゼロ一 & ゼロゼロイチ$/d
+/^一二三四 & イチニーサンヨン$/d
+s/^四三二一;００１１２３４４３２１)です<SB> & ヨンサンニーイチデス<SB>$/００１１２３４４３２１です/
+
+# DTFPT006_JTRANS
+/^七四六八 & ナナヨンロクハチ$/d
+s/^ゼロ五一ゼロ;００１７４６８０５１０) & ゼロゴーイチゼロ$/００１７４６８０５１０/
+
+# DTFPT019_JTRANS
+s/^電話番号のほうが(A ゼロゼロ一の七八二四の & デンワバンゴーノホーガゼロゼロイチノナナハチニーヨンノ$/電話番号のほうが/
+s/^九四三五;００１−７８２４−９４３５)になります<SB> & キューヨンサンゴーニナリマス<SB>$/００１−７８２４−９４３５になります/
+
+# DTFPT005_JTRANS
+/^(A エムオー & エムオー$/d
+/^シーエイチアイ & シーエイチアイ$/d
+/^ディーユー & ディーユー$/d
+s/^ケーアイ;ＭＯＣＨＩＤＵＫＩ)<SB> & ケーアイ<SB>$/ＭＯＣＨＩＤＵＫＩ/
+
+# DTFPT005_JTRANS
+/^(A ゼットユー & ゼットユー$/d
+s/^ケーアイ;ＺＵＫＩ)<SB> & ケーアイ<SB>$/ＺＵＫＩ/
+/^(A ゼロゼロ一 & ゼロゼロイチ$/d
+/^ゼロ一二九 & ゼロイチニーキュー$/d
+s/^一六三三;００１０１２９１６３３)<SB> & イチロクサンサン<SB>$/００１０１２９１６３３/
+
+# DTFPT004_JTRANS
+/^(A エヌオーエス & エヌオーエス$/d
+s/^イー;ＮＯＳＥ)<SB> & イー<SB>$/ＮＯＳＥ/
+/^(A ゼロゼロ一 & ゼロゼロイチ$/d
+/^三ゼロ九九 & サンゼロキューキュー$/d
+s/^ゼロゼロ七七;００１３０９９００７７)<SB> & ゼロゼロナナナナ<SB>$/００１３０９９００７７/
+
+# DTFPT004_EJTRANS
+/^(A ゼロゼロ一 & ゼロゼロイチ/d
+/^三 & サン$/d
+s/^ゼロ九九;００１３０９９)(D ゼ)(F え)(A ゼロゼロ七七;００７７)でございますね<SB> & ゼロキューキュー(D ゼ)(F エ)ゼロゼロナナナナデゴザイマスネ<SB>$/００１３０９９ゼえ００７７でございますね/
+s/^(D には)(F えーっと)(A 二 & (D ニハ)(F エーット)ニー$/にはえーっと二/
+s/^ゼロ一;２０１)号室の予約です<SB> & ゼロイチゴーシツノヨヤクデス<SB>$/２０１号室の予約です/
+
+# DTFPT012_EJTRANS
+/^(A ゼロゼロ一 & ゼロゼロイチ$/d
+/^一 & イチ$/d
+/^七 & ナナ$/d
+/^七二 & ナナニ$/d
+/^三七 & サンナナ$/d
+s/^八九;００１１７７２３７８９) & ハチキュー$/００１１７７２３７８９/
+
+# DTFPT011_EJTRANS
+/^八 & ハチ$/d
+/^二 & ニー$/d
+/^七三 & ナナサン$/d
+s/三七二八;００１８２７３３７２８)です<SB> & サンナナニーハチデス<SB>/００１８２７３３７２８です/
+
+# DTFPT014_EJTRANS
+/^(F う)(F えー)(A ゼロゼロ三 & (F ウ)(F エー)ゼロゼロサン$/d
+/^九六一ゼロ & キューロクイチゼロ$/d
+s/^二八七一;００３９６１０２８７１)です<SB> & ニーハチナナイチデス<SB>$/うえー００３９６１０２８７１です/
+
+# DTFPT014_JTRANS
+s/^(F えー<C> & (F エー<C>$/えー/
+s/^と)空き室<H> & ト)アキシツ<H>/と空き室/
+
+# DTFPT015_EJTRANS
+s/^(R アナ & (R アナ$/アナ/
+s/^パーキン)です<SB> & パーキン)デス<SB>/パーキンです/
+
+# DTASF043_JTRANS
+s/(X (雑音 他に & (X (雑音 ホカニー/他に/
+s/(F あのー)) & (F アノー))/あのー/
+s/お酒) & オサケー)/お酒/
+s/(雑音 はい大丈夫です & (雑音 ハイダイジョーブデス/はい大丈夫です/
+s/どうぞ)<SB> & ドーゾ)<SB>/どうぞ/
+
+# DTCSF044_JTRANS
+s/(雑音 とー)) & (雑音 トー))/とー/
+
+# DTCSF044_JTRANS
+s/^はい(F えーとー)大阪駅の時(雑音 には & ハイ(F エートー)オーサカエキノトキ(雑音 ニワ$/はいえーとー大阪駅の時雑音には/
+s/^(F えっとー)) & (F エットー))$/えっとー/
+
+# DTCST014_EJTRANS
+s/^(雑音(F う))地下鉄の場合ですけれども & (雑音(F ウ))チカテツノバアイデスケレドモ$/う地下鉄の場合ですけれども/
+
+# DTEST016_EJTRANS
+s/^エアラインズでは(D メン)(X マイレッジ & エアラインズデワ(D メン)(X マイレッジ$/エアラインズではメンマイレッジ/
+s/^カバリッジ)マイレッジサービスっていうのがあるんですね<SB> & カバリッジ)マイレッジサービスッテユーノガアルンデスネ<SB>$/カバリッジマイレッジサービスっていうのがあるんですね/
+
+# DTEST051_JTRANS
+s/^(F え)それでは(雑音 (F あのー)変更の(F えー)手続きを(F えー) & (F エ)ソレデワ(雑音 (F アノー)ヘンコーノ(F エー)テツヅキオ(F エー))$/えそれではあのー変更のえー手続きをえー/
+
+# DTEST088_EJTRANS
+s/^(笑 そうです<SB> (A ユーエス;ＵＳ)エアーです)<SB> & (笑 ソーデス<SB>ユーエスエアーデス)<SB>$/そうですＵＳエアーです/
+
+# DTFPT001_EJTRANS
+/^(A ゼロゼロ一一二三 & ゼロゼロイチイチニーサン/d
+/^四五 & ヨンゴー$/d
+s/^一;００１１２３４５１)(F い)(A 四;４)でございますか<SB> & イチ(F イ)ヨンデゴザイマスカ<SB>$/００１１２３４５１い４でございますか/
+s/(F えー)(A 四 & (F エー)ヨン$/えー/
+s/○六;４０６)でございます<SB>そして二十一日二十二日でありますけれども & マルロクデゴザイマス<SB>ソシテニジューイチニチニジューニニチデアリマスケレドモ/４０６でございます<SB>そして二十一日二十二日でありますけれども/
+
+# DTFPT001_JTRANS
+/^(A ディー & ディー$/d
+/^エー & エー$/d
+/^アイ & アイ$/d
+/^エスエー & エスエー$/d
+/^ケー & ケー$/d
+s/^イー;ＤＡＩＳＡＫＥ)<SB> & イー<SB>$/ＤＡＩＳＡＫＥ/
+/^(A ゼロゼロ一 & ゼロゼロイチ$/d
+/^一二三四 & イチニーサンヨン$/d
+s/^九五一四;００１１２３４９５１４)<SB> & キューゴーイチヨン<SB>$/００１１２３４９５１４/
+/^(A 一二三四 & イチニーサンヨン$/d
+s/^九五一四;１２３４９５１４)<SB> & キューゴーイチヨン<SB>$/１２３４９５１４/
+
+# DTFPT002_JTRANS
+/^(A エー & エー$/d
+/^アール & アール$/d
+/^アイ & アイ$/d
+/^ワイ & ワイ$/d
+/^オー & オー$/d
+/^エヌ & エヌ$/d
+/^イー & イー$/d
+s/^エムオーティーオー;ＡＲＩＹＯＮＥＭＯＴＯ)<SB> & エムオーティーオー<SB>$/ＡＲＩＹＯＮＥＭＯＴＯ/
+/^(A ゼロゼロ一 & ゼロゼロイチ$/d
+/^三四五八 & サンヨンゴーハチ$/d
+s/^二九九九;００１３４５８２９９９)<SB> & ニーキューキューキュー<SB>$/００１３４５８２９９９/
+
+# DTFPT006_EJTRANS
+/^(F え)(A ゼロゼロ一七四六八 & (F エ)ゼロゼロイチナナヨンロクハチ$/d
+s/ゼロ五一ゼロ;００１７４６８０５１０)ですね & ゼロゴーイチゼロデスネ$/００１７４６８０５１０ですね/
+
+# DTFPT012_JTRANS
+/^(W いたす<C> & (W イタス<C>$/d
+s/^まっしょうか;いたしましょうか)<SB> & マッショーカ;イタシマショーカ)<SB>$/いたしましょうか/
+
+# DTFPT013_EJTRANS
+/^(A ゼロゼロ三 & ゼロゼロサン$/d
+/^三一三五 & サンイチサンゴー$/d
+s/^三四一四;００３３１３５３４１４)です<SB> & サンヨンイチヨンデス<SB>$/００３３１３５３４１４です/
+
+# DTFST065_JTRANS
+/^(F えーっと)そちらは(X レー<C> & (F エーット)ソチラワー(X レー<C>$/d
+s/クサイドホテルでした)(F あ)(D ぽ)ホテルパシフィックで & クーサイドホテルデシタ)(F ア)(D ポ)ホテルパシフィックーデ$/クサイドホテルでしたあぽホテルパシフィックで/
+
+# DTFST066_EJTRANS
+s/^はい<FV>(F え)キャンセルに(D しま)<FV>(D き)決まりましたらいろいろ(W ありましまって;ありまして & ハイ<FV>(F エ)キャンセルニ(D シマ)<FV>(D キ)キマリマシタライロイロ(W アリマシマッテ;アリマシテ)$/はいえキャンセルにしまき決まりましたらいろいろありまして/
+
+# DTHSF040_JTRANS
+s/(笑 (L (F へー)(O わからへん))) & (笑 (L (F ヘー)(O ワカラヘン)))/へーわからへん/
+
+# DTLST015_EJTRANS
+s/^(F え)(X 受付が & (F エ)(X ウケツケガ$/え受付が/
+s/^いますが<H>)(F えー)(F お)受付に聞いていただけると & イマスガ<H>)(F エー)(F オ)ウケツケニキーテイタダケルト$/いますがえーお受付に聞いていただけると/
+s/^(F まあ)(D エ)(X (A エーヨン;Ａ４)サイズ & (F マア)(D エ)(X エーヨンサイズ$/まあエＡ４サイズ/
+s/^しかありませ)(A エーヨン;Ａ４)サイズしかないんです<SB> & シカアリマセ)エーヨンサイズシカナインデス<SB>$/しかありませＡ４サイズしかないんです/
+
+# DTJSF095_EJTRANS
+s/^(O 一 八 零 二)号室(A 千八百二;１８０２)号室があなたのお部屋です<SB> & (O イチハチゼロニ)ゴーシツセンハッピャクニゴーシツガアナタノオヘヤデス<SB>$/１８０２号室があなたのお部屋です/
+
+
+s/ & .*$//
+
+s/<リップ音>//g
+
+s/<SB>/\n/g
+s/<FV>//g
+s/<雑音>//g
+
+s/<C>//g
+s/<I>//g
+s/<H>//g
+s/<息>//g
+s/<舌>//g
+s/<喉>//g
+s/<笑>//g
+s/<リップ音>//g
+
+s/(?)//g
+
+s/(リップ音 \([^;()]*\))/\1/g
+s/(雑音 \([^;()]*\))/\1/g
+s/(笑 \([^;()]*\))/\1/g
+s/(息 \([^;()]*\))/\1/g
+s/(D \([^;()]*\))/\1/g
+s/(F \([^;()]*\))/\1/g
+s/(L \([^;()]*\))/\1/g
+s/(R \([^;()]*\))/\1/g
+s/(S \([^;()]*\))/\1/g
+s/(X \([^;()]*\))/\1/g
+s/(P? \([^;()]*\))/\1/g
+s/(? \([^,;()]*\))/\1/g
+s/(O \([^;()]*\))/\1/g
+s/(Q \([^;()]*\))/\1/g
+
+s/(W [^;()]*;\([^()]*\))/\1/g
+s/(A [^;()]*;\([^()]*\))/\1/g
+s/(W [^;()]*;\([^()]*\))/\1/g
+s/(? [^,()]*,\([^()]*\))/\1/g
+
+s/(リップ音 \([^;()]*\))/\1/g
+s/(雑音 \([^;()]*\))/\1/g
+s/(笑 \([^;()]*\))/\1/g
+s/(息 \([^;()]*\))/\1/g
+s/(D \([^;()]*\))/\1/g
+s/(F \([^;()]*\))/\1/g
+s/(L \([^;()]*\))/\1/g
+s/(R \([^;()]*\))/\1/g
+s/(S \([^;()]*\))/\1/g
+s/(X \([^;()]*\))/\1/g
+s/(P? \([^;()]*\))/\1/g
+s/(? \([^;()]*\))/\1/g
+s/(O \([^;()]*\))/\1/g
+s/(Q \([^;()]*\))/\1/g
+
+' | \
+awk 'NF > 0'
+
+}
+
+function character_per_line () {
+  awk -v NAME=$1 '{ n = split($0, parts, "") ; for (i = 1; i <= n; i++) { print parts[i], ++num, NAME } }' 
+}
+
+
+################################################
+# main script
+
+for i in ${DATA1999}; do
+  for j in JTRANS EJTRANS; do
+  ##
+  TEMP1="${TMP:-/tmp}/output_trn_${i}"
+  TEMP2="${TMP:-/tmp}/output_annotated_${i}"
+  ##
+  cat ${SOURCE}/dialogue/1999/TRANS/${j}/${i}* | \
+  ciair_to_trn $i | \
+  iconv -c -f EUC-JP -t UTF-8 | \
+  extract_trn_sentences | \
+  character_per_line "${i}_${j}" > ${TEMP1}
+  ##
+  if test ${DIFF}; then
+    Keyaki "${i}_${j}" | yield -j | character_per_line "${i}_${j}" > ${TEMP2}
+    if test "${MELD}"; then
+      meld ${TEMP1} ${TEMP2}
+    else
+      diff ${TEMP1} ${TEMP2}
+    fi
+  else
+    echo "${i} ${j}"
+    cat ${TEMP1} | awk '{ print $1 }' > ${TEMP2}
+    extract_data --extension ".psd" --dir "${ANNOTATION}" --look "${i}_${j}" | \
+    obfuscate_to_tree ${TEMP2} | \
+    munge-trees -p | \
+    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}_${j}" | awk '{ print $2 }')"
+  fi
+  rm ${TEMP1} ${TEMP2}
+  done
+done
+
+for i in ${DATA2002}; do
+  for j in JTRANS EJTRANS; do
+  ##
+  TEMP1="${TMP:-/tmp}/output_trn_${i}"
+  TEMP2="${TMP:-/tmp}/output_annotated_${i}"
+  ##
+  cat ${SOURCE}/dialogue/2002/TRANS/${j}/${i}* | \
+  ciair_to_trn $i | \
+  iconv -c -f EUC-JP -t UTF-8 | \
+  extract_trn_sentences | \
+  character_per_line "${i}_${j}" > ${TEMP1}
+  ##
+  if test ${DIFF}; then
+    Keyaki "${i}_${j}" | yield -j | character_per_line "${i}_${j}" > ${TEMP2}
+    if test "${MELD}"; then
+      meld ${TEMP1} ${TEMP2}
+    else
+      diff ${TEMP1} ${TEMP2}
+    fi
+  else
+    echo "${i} ${j}"
+    cat ${TEMP1} | awk '{ print $1 }' > ${TEMP2}
+    extract_data --extension ".psd" --dir "${ANNOTATION}" --look "${i}_${j}" | \
+    obfuscate_to_tree ${TEMP2} | \
+    munge-trees -p | \
+    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}_${j}" | awk '{ print $2 }')"
+  fi
+  rm ${TEMP1} ${TEMP2}
+  done
+done
+

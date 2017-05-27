@@ -1,0 +1,52 @@
+#!/bin/sh
+
+usage () {
+    echo "Usage: $0 [-d cdrom_dir]"
+    exit 1
+}
+
+make_dir () {
+    if [ ! -d "$1" ]; then
+	mkdir -p $1
+    fi
+}
+
+CDROM_DIR=/mnt/cdrom
+PERL=perl
+BASE_DIR=`dirname $0`
+SRC_DIR=$BASE_DIR/KyotoCorpus4.01-src
+DEST_DIR=$BASE_DIR/../mainichi
+
+while getopts d:h OPT
+do
+    case $OPT in
+	d)  CDROM_DIR=$OPTARG
+	    ;;
+	h)  usage
+	    ;;
+	*) usage
+	    ;;
+    esac
+done
+shift `expr $OPTIND - 1`
+
+if [ ! -f $CDROM_DIR/MAI95.TXT ]; then
+    echo "Not found: $CDROM_DIR/MAI95.TXT"
+    usage
+    exit
+fi
+
+
+make_dir $DEST_DIR
+
+echo "converting MAI95.TXT to SGML ..."
+$PERL $SRC_DIR/trans.pl < $CDROM_DIR/MAI95.TXT 2> /dev/null | $PERL $SRC_DIR/mainichi.pl $DEST_DIR
+
+echo "making KyotoCorpus (syn) ..."
+#for i in 01 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17
+for i in 01 03
+do
+    echo "converting 9501$i ..."
+    $PERL $SRC_DIR/format.pl -exed 9501$i < $DEST_DIR/9501.all | $PERL $SRC_DIR/dupli.pl > $DEST_DIR/9501$i.org
+done
+

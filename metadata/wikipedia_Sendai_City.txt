@@ -1,0 +1,6 @@
+title: Wikipedia article
+date: 2013/11/02
+source: 仙台市-Wikipedia.html
+genre: Wikipedia
+subcorpus: Wikipedia general
+terms of use: Creative Commons Attribution-ShareAlike License 3.0

@@ -1,0 +1,101 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      table_to_tree - convert tabular information to trees
+
+SYNOPSIS
+      table_to_tree [OPTIONS]
+
+DESCRIPTION
+      Filter to convert tabular information that orients tree
+      structure around parts-of-speech nodes into a trees.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+
+}
+
+function example () {
+
+cat 1>&2 << END
+
+EXAMPLE
+      $ cat << EOF | table_to_tree | munge-trees -p
+END
+
+cat $0 | sed '1,/^cat << DEMO/d; /^DEMO$/,$d' | tree_to_table | sed 's/^/      > /' 1>&2
+
+cat 1>&2 << END
+      > EOF
+END
+
+cat << DEMO | tree_to_table | table_to_tree | munge-trees -p | sed 's/^/      -| /' 1>&2
+(IP-MAT (NP-SBJ (D The) (ADJ quick) (ADJ brown) (N fox)) (VBD jumped) (PP (P over) (NP (D the) (ADJ lazy) (N dog))) (. .))
+DEMO
+
+}
+
+function see_also () {
+
+cat 1>&2 << END
+
+SEE ALSO
+      tree_to_table(1)
+END
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --example)  # show an example
+         help_information
+         example
+         see_also
+         exit ;;
+
+      *)          # show this help message
+         help_information
+         see_also
+         exit ;;
+
+  esac
+done
+
+
+######################
+# script starts here #
+######################
+
+sed '
+s/&/__amp__/g
+' | gawk '
+/^\#/ { next }
+
+NF == 0 {
+  printf ("\n")
+  next
+}
+
+{
+  $1 = gensub(/_/, " ", "g", $1)
+  printf gensub(/\*/, sprintf("(%s %s)", $2, $NF), 1, $1)
+  next
+}
+' | \
+sed '
+s/＊/*/g
+s/♕/_/g
+s/__amp__/\&/
+' | \
+munge-trees -w
+

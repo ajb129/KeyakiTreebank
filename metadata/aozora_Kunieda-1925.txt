@@ -1,0 +1,7 @@
+title: Sanjinnai
+author: Kunieda, Shiro
+date: 1925
+source: Poketto, January edition; Aozora Bunko (http://www.aozora.gr.jp/cards/000255/card43661.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

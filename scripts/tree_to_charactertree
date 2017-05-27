@@ -1,0 +1,97 @@
+#!/bin/bash
+
+####################
+# help information #
+####################
+
+function help_information () {
+
+cat 1>&2 << END
+NAME
+      tree_to_charactertree - transform tree
+
+SYNOPSIS
+      tree_to_charactertree
+
+DESCRIPTION
+      Filter to transform tree with terminals split into characters.
+
+OPTIONS
+END
+
+cat $0 | grep " \# " 1>&2
+
+}
+
+function example () {
+
+cat 1>&2 << END
+
+EXAMPLE
+      $ cat << EOF | tree_to_charactertree | munge-trees -p
+END
+
+cat $0 | sed '1,/^cat << DEMO/d; /^DEMO$/,$d' | munge-trees -p | sed 's/^/      > /' 1>&2
+
+cat 1>&2 << END
+      > EOF
+END
+
+cat << DEMO | tree_to_charactertree | munge-trees -p | sed 's/^/      -| /' 1>&2
+( (IP-MAT (PP (NP (N 授業)) (P が)) (NP-SBJ *が*) (VB 終わる) (PU 。)) (ID 7_textbook_kisonihongo;page_13;AT1-7;JP))
+DEMO
+
+}
+
+function see_also () {
+
+cat 1>&2 << END
+
+SEE ALSO
+      tree_to_tnt(1)
+END
+
+}
+
+while test $# -gt 0 ; do
+  case "$1" in
+
+      --number)     # number all characters
+         NUMBER=1 ; shift ;;
+
+      --example)    # show an example
+         help_information
+         example
+         see_also
+         exit ;;
+
+      *)            # show this help message
+         help_information
+         see_also
+         exit ;;
+
+  esac
+done
+
+######################
+# script starts here #
+######################
+
+
+munge-trees -w | \
+sed 's/(/\n&/g; s/)/\n&/g' | \
+awk -v NUMBER="${NUMBER}" '
+NF != 2 || $1 ~ /^\(ID/ || $2 ~ /^\*/ { print ; next }
+
+{
+printf("%s", $1)
+
+n = split($2, parts, "")
+
+for (i = 1; i <= n; i++) { printf (" (+ %s%s)", parts[i], NUMBER ? "_" ++number : "") }
+
+printf("\n")
+}
+
+' | munge-trees -w
+
