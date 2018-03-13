@@ -1,0 +1,6 @@
+title: spoken refusal response data
+date: 2015
+source: (JF14) Spoken Refusal Response Corpus. Tomoko Hotta, Tohoku University.
+genre: spoken
+subcorpus: spoken refusal response
+terms of use: Tomoko Hotta, Tohoku University. All Rights Reserved.

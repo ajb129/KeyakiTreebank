@@ -1,0 +1,6 @@
+title: Hatouken
+date: 2003 
+source: Ueda, Hideto. (2003). Hatouken. Tokuma Shoten. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00013.xml

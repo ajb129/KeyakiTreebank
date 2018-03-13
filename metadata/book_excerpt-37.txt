@@ -1,0 +1,6 @@
+title: Shoubai no "keikaku jissen kenshou"
+date: 2004
+source: Miyazaki, Fumiaki. (2004). Shoubai no "keikaku jissen kenshou" Shougyoukai.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB46_00066.xml

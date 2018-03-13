@@ -1,0 +1,6 @@
+title: 21 Seiki ni kachinokoru IT supiido keiei
+date: 2001
+source: Matsumoto, Takatoshi. (2001). 21 Seiki ni kachinokoru IT supiido keiei. Keizaikai. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB13_00021.xml

@@ -1,6 +1,5 @@
 title: Wikipedia article
 date: 2013/11/05
 source: 伊達政宗-Wikipedia.html
-genre: Wikipedia
-subcorpus: Wikipedia general
+genre: wikipedia
 terms of use: Creative Commons Attribution-ShareAlike License 3.0

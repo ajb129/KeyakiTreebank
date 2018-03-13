@@ -1,0 +1,6 @@
+title: Gojuu meetoru no senki
+date: 2003 
+source: Kosaka, Haruo. (2003). Gojuu meetoru no senki. Bungeisha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00009.xml

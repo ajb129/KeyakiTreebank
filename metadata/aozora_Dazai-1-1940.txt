@@ -1,0 +1,7 @@
+title: Sake-girai
+author: Dazai, Osamu
+date: 1940
+source: Chisei Vol. 3, No. 3; Aozora Bunko (http://www.aozora.gr.jp/cards/000035/card18350.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

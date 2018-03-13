@@ -1,0 +1,7 @@
+title: The Sisters (Shimai)
+author: Joyce, James --coderati (trans.)
+date: 2006
+source: Open-shelf (http://open-shelf.appspot.com/Dubliners/chapter1.html)
+genre: fiction
+subcorpus: Open-shelf
+terms of use: Public domain

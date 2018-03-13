@@ -125,7 +125,7 @@ s/<SUW ColumnID="014" OrthographicTranscription="五;１９８５)"/<SUW ColumnI
     extract_data --extension ".psd" --dir "${ANNOTATION}" --look "${i}" | \
     obfuscate_to_tree ${TEMP2} | \
     munge-trees -p | \
-    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}" | awk '{ print $2 }')"
+    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}" | awk '{ print $2 }')".psd
   fi
   rm ${TEMP1} ${TEMP2}
 done

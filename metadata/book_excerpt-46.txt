@@ -1,0 +1,6 @@
+title: Oosaka Nara
+date: 2005
+source: Oonishi, Tokiko (ed.). (2005). Oosaka Nara. Hoshi no Wa Kai.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00013.xml

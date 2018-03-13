@@ -1,0 +1,6 @@
+title: Doko ni itatte futsuu no seikatsu
+date: 2003
+source: Matsumoto, You. (2003). Doko ni itatte futsuu no seikatsu. Nigensha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00017.xml

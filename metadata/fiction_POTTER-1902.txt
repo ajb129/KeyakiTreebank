@@ -1,0 +1,8 @@
+title: translation of "The Tale of Peter Rabbit" by Beatrix Potter
+date: 2017
+genre: fiction
+source title: The Tale of Peter Rabbit
+source author: Beatrix Potter
+source date: 1902
+source: Frederick Warne & Co., 1902; Project Gutenberg, January 30, 2005. Produced by Robert Cicconetti, Ronald Holder and the PG Online Distributed Proofreading Team (http://www.gutenberg.org/ebooks/)
+terms of use: Creative Commons license

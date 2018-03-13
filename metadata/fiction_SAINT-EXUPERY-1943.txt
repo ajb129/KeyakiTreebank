@@ -1,0 +1,8 @@
+title: translation of "extract from: The Little Prince" by Antoine de Saint-Exupery
+date: 2017
+genre: fiction
+source title: extract from: The Little Prince
+source author: Antoine de Saint-Exupery
+source date: 1943
+source: The Little Prince Corpus (http://amr.isi.edu/download.html)
+terms of use: Creative Commons license

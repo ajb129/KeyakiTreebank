@@ -1,0 +1,6 @@
+title: Tamashi no moyuru mamani
+date: 2004
+source: Isadora Duncan --Yamagawa, Akiko and Yamagawa (2004). Tamashi no moyuru mamani. Fuzambo Intaanashonaru.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB47_00045.xml

@@ -1,0 +1,4 @@
+title: assorted examples
+genre: example
+subcorpus: misc
+terms of use: Public domain

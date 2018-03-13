@@ -1,0 +1,6 @@
+title: Nijiiro no sakana
+date: 2001
+source: Tatematsu, Wahei. (2001). Nijiiro no sakana. Fureeberukan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB1n_00025.xml

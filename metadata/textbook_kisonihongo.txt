@@ -1,0 +1,5 @@
+title: Examples from: Kiso Nihongo Bunpou (Basic Grammar of Japanese)
+date: 1992
+source: Takashi Masuoka and Yukinori Takubo (1992). Kiso Nihongo Bunpou (Basic Grammar of Japanese). Kuroshio Shuppan, Tokyo
+genre: textbook
+terms of use: By permission of Kuroshio Shuppan (c)

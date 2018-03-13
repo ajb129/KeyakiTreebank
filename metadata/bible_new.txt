@@ -2,6 +2,5 @@ title: Sample from the New Testament
 date: 2015/10/17
 source: https://github.com/christos-c/bible-corpus/blob/master/bibles/Japanese.xml
 genre: bible
-subcorpus: bible-corpus
 details: A massively parallel corpus: the Bible in 100 languages, Christos Christodoulopoulos and Mark Steedman, Language Resources and Evaluation, 49 (2)
 terms of use: Creative Commons license

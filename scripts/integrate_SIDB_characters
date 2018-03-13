@@ -406,7 +406,7 @@ for i in ${DATA1999}; do
     extract_data --extension ".psd" --dir "${ANNOTATION}" --look "${i}_${j}" | \
     obfuscate_to_tree ${TEMP2} | \
     munge-trees -p | \
-    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}_${j}" | awk '{ print $2 }')"
+    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}_${j}" | awk '{ print $2 }')".psd
   fi
   rm ${TEMP1} ${TEMP2}
   done
@@ -437,7 +437,7 @@ for i in ${DATA2002}; do
     extract_data --extension ".psd" --dir "${ANNOTATION}" --look "${i}_${j}" | \
     obfuscate_to_tree ${TEMP2} | \
     munge-trees -p | \
-    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}_${j}" | awk '{ print $2 }')"
+    sed "s/^(/\n(/" > "${DESTINATION}/$(extract_data --extension ".psd" --dir "${ANNOTATION}" | grep "${i}_${j}" | awk '{ print $2 }')".psd
   fi
   rm ${TEMP1} ${TEMP2}
   done

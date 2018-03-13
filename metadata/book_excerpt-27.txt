@@ -1,0 +1,6 @@
+title: Teikoku Hoteru chuubou monogatari
+date: 2004
+source: Murakami, Nobuo. (2004). Teikoku Hoteru chuubou monogatari. Nihon Keizai Shimbunsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB42_00014.xml

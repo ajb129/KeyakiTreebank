@@ -1,0 +1,6 @@
+title: Fukkatsu! Nihon no handoutai sangyou
+date: 2004
+source: Oomi, Tadahiro. (2004). Fukkatsu! Nihon no handoutai sangyou. Zaikai Kenkyuusyo.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00024.xml

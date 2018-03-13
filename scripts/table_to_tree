@@ -95,7 +95,7 @@ NF == 0 {
 sed '
 s/＊/*/g
 s/♕/_/g
-s/__amp__/\&/
+s/__amp__/\&/g
 ' | \
 munge-trees -w
 

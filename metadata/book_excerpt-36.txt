@@ -1,0 +1,6 @@
+title: Tsuji Shizuo korekushon
+date: 2004
+source: Tsuji, Shizuo. (2004). Tsuji Shizuo korekushon. Chikuma Shobou. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00077.xml

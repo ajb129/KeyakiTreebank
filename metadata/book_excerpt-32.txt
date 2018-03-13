@@ -1,0 +1,6 @@
+title: Iryouhoujin iryouseikyou no kaikei kaikaku
+date: 2004
+source: Morikawa, Kazuyuki. (2004). Iryouhoujin iryouseikyou no kaikei kaikaku. Doujidaisha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB44_00050.xml

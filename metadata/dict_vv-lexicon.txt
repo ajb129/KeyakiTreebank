@@ -1,0 +1,6 @@
+title: Compound Verb Lexicon
+date: 2015/02/26
+source: National Institute for Japanese Language and Linguistics. (2015) The Compound Verb Lexicon [Original Data]. Available from http://vvlexicon.ninjal.ac.jp
+genre: dictionary
+subcorpus: Compound Verb Lexicon
+terms of use: National Institute for Japanese Language and Linguistics. All Rights Reserved.

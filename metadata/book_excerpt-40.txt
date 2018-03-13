@@ -1,0 +1,6 @@
+title: Ohaka mandara
+date: 2004
+source: Ikeda, Ryouji. (2004). Ohaka mandara. Shinpuusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB48_00016.xml

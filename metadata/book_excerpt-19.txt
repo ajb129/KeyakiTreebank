@@ -1,0 +1,6 @@
+title: Hisho: Hansho yuusha
+date: 2003
+source: Kouno, Taeko. (2003). Hisho: Hansho yuusha. Shinchousha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00010.xml

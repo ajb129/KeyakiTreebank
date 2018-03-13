@@ -1,0 +1,6 @@
+title: Article from Japanese-English Bilingual Corpus of Wikipedia's Kyoto Articles (Version 2.01)
+date: 2011/01/13
+source: RLW_00003.xml (Available from https://alaginrc.nict.go.jp/WikiCorpus/index.html).
+genre: wikipedia
+subcorpus: wikipedia Kyoto
+terms of use: Creative Commons Attribution-Share-Alike License 3.0

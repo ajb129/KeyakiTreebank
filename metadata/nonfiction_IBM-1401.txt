@@ -1,0 +1,8 @@
+title: translation of IBM 1401 Programming Systems
+date: 2017
+genre: non-fiction
+source title: IBM 1401 Programming Systems
+source author: Anonymous
+source: Project Gutenberg, December 9, 2008. Produced by Gerard Arthus, Carla Foust and the Online Distributed Proofreading Team (http://www.gutenberg.org/ebooks/27468)
+subcorpus: Project Gutenberg
+terms of use: Creative Commons license

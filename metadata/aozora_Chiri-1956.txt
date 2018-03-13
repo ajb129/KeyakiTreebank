@@ -1,0 +1,7 @@
+title: Ainugogaku
+author: Chiri, Mashiho
+date: 1956
+source: Aozora Bunko (http://www.aozora.gr.jp/cards/001540/files/53897_50735.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

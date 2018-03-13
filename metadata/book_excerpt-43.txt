@@ -1,0 +1,6 @@
+title: Za Eejeento
+date: 2005
+source: Onizuka, Tadashi. (2005). Za Eejeento. Rabndomuhausu Kodansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB50_00003.xml

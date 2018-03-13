@@ -1,0 +1,6 @@
+title: Ago oji no kawa
+date: 2001
+source: Shimoda, Kageki. (2001). Ago oji no kawa. Kiba Book.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB1n_00066.xml

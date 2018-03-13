@@ -1,0 +1,6 @@
+title: Tokoshie no inochi o eru tame ni
+date: 2005
+source: Kajiwara, Kazuyoshi. (2005). Tokoshie no inochi o eru tame ni. JDC Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB51_00007.xml

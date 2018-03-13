@@ -1,0 +1,4 @@
+title: translation of newswire data
+source: American National Corpus MASC project (http://www.anc.org/data/masc/)
+genre: news
+terms of use: Public domain

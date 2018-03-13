@@ -1,0 +1,5 @@
+title: translation of newswire data
+data: 2017
+genre: newswire
+source: Groningen Meaning Bank (GMB) project (http://gmb.let.rug.nl/)
+terms of use: Public domain

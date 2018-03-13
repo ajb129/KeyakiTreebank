@@ -1,0 +1,38 @@
+title: Akamatsu ichizoku no seisui
+date: 2001
+source: Terabayashi, Shun. (2001). Akamatsu ichizoku no seisui. Kobe Shinbun Sougou Shuppan Sentaa. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB12_00008.xml
+title: Shougaisha fukushi seido kaikaku nani ga mondai ka
+date: 2005
+source: Higashikawa, Etsuko. (2005). Shougaisha fukushi seido kaikaku nani ga mondai ka. Zenkoku Shougaisha Mondai Kenkyuukai Shuppanbu.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00081.xml
+title: Umezawa Takeshi zenshuu
+date: 2001
+source: Umezawa Takeshi. (2001). Umezawa Takeshi zenshuu. Shogakkan.
+genre: bookpublished book
+# BCCWJ link: PB10_00047.xml
+title: Umezawa Takeshi zenshuu
+date: 2001
+source: Umezawa Takeshi. (2001). Umezawa Takeshi zenshuu. Shogakkan.
+genre: bookpublished book
+# BCCWJ link: PB10_00047.xml
+title: Shougaisha fukushi seido kaikaku nani ga mondai ka
+date: 2005
+source: Higashikawa, Etsuko. (2005). Shougaisha fukushi seido kaikaku nani ga mondai ka. Zenkoku Shougaisha Mondai Kenkyuukai Shuppanbu.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00081.xml
+title: Umezawa Takeshi zenshuu
+date: 2001
+source: Umezawa Takeshi. (2001). Umezawa Takeshi zenshuu. Shogakkan.
+genre: bookpublished book
+# BCCWJ link: PB10_00047.xml
+title: Umezawa Takeshi zenshuu
+date: 2001
+source: Umezawa Takeshi. (2001). Umezawa Takeshi zenshuu. Shogakkan.
+genre: bookpublished book
+# BCCWJ link: PB10_00047.xml

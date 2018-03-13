@@ -1,0 +1,4 @@
+title: Momo Taro
+genre: example
+subcorpus: misc
+terms of use: Public domain

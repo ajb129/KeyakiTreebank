@@ -1,0 +1,126 @@
+title: Hitori no chiisana otomodachi ga
+date: 2001
+source: Uchikoshi, Gonbei. (2001). Hitori no chiisana otomodachi ga. Inochi no Kotoba-sha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB11_00006.xml
+title: Sheera hime no bouken umi no oukan
+date: 2002
+source: Murayama, Saki. (2002). Sheera hime no bouken umi no oukan. Doushinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB2n_00003.xml
+title: Kodomo no kansei ga tsukuru rika jugyou
+date: 2003
+source: Morimoto, Shinya. (2003). Kodomo no kansei ga tsukuru rika jugyou. Touyoukan Shuppansha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00037.xml
+title: Zettai shippai shinai maihoomu kounyuu daimanzoku gaidobukku
+date: 2003
+source: Rakuraku mochiie iinkai. (2003). Zettai shippai shinai maihoomu kounyuu daimanzoku gaidobukku. Jouhou Sentaa Shuppankyoku.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00046.xml
+title: Bengoushi to no tsukiaikata kangaemasu
+date: 2003
+source: Kubouchi, Suburu. (2003). Bengoushi to no tsukiaikata kangaemasu. Uejji. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00083.xml
+title: Ikaruga no takumi Miyadaiku sandai
+date: 2003
+source: Nishioka, Tsunekazu and Aoyama, Shigeru. (2003). Ikaruga no takumi Miyadaiku sandai. Heibonsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB35_00005.xml
+title: Ekohausu ni sumitai
+date: 2003
+source: Nakano, Hiroshi. (2003). Ekohausu ni sumitai. Arachi Suppansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB35_00013.xml
+title: "Inaka" shachou no seikou keieijutu
+date: 2003
+source: Tsurumaki, Yasuo. (2003). "Inaka" shachou no seikou keieijutu. IN Tsuushinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB36_00006.xml
+title: Amagasaki sumou monogatari
+date: 2003
+source: Inoue, Mariko. (2003). Amagasaki sumou monogatari. Kobe Shimbun Sougou Shuppan Sentaa.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB37_00050.xml
+title: Gojuu meetoru no senki
+date: 2003 
+source: Kosaka, Haruo. (2003). Gojuu meetoru no senki. Bungeisha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00009.xml
+title: Hisho: Hansho yuusha
+date: 2003
+source: Kouno, Taeko. (2003). Hisho: Hansho yuusha. Shinchousha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00010.xml
+title: Sheera hime no bouken umi no oukan
+date: 2002
+source: Murayama, Saki. (2002). Sheera hime no bouken umi no oukan. Doushinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB2n_00003.xml
+title: Kodomo no kansei ga tsukuru rika jugyou
+date: 2003
+source: Morimoto, Shinya. (2003). Kodomo no kansei ga tsukuru rika jugyou. Touyoukan Shuppansha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00037.xml
+title: Zettai shippai shinai maihoomu kounyuu daimanzoku gaidobukku
+date: 2003
+source: Rakuraku mochiie iinkai. (2003). Zettai shippai shinai maihoomu kounyuu daimanzoku gaidobukku. Jouhou Sentaa Shuppankyoku.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00046.xml
+title: Bengoushi to no tsukiaikata kangaemasu
+date: 2003
+source: Kubouchi, Suburu. (2003). Bengoushi to no tsukiaikata kangaemasu. Uejji. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00083.xml
+title: Ikaruga no takumi Miyadaiku sandai
+date: 2003
+source: Nishioka, Tsunekazu and Aoyama, Shigeru. (2003). Ikaruga no takumi Miyadaiku sandai. Heibonsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB35_00005.xml
+title: Ekohausu ni sumitai
+date: 2003
+source: Nakano, Hiroshi. (2003). Ekohausu ni sumitai. Arachi Suppansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB35_00013.xml
+title: "Inaka" shachou no seikou keieijutu
+date: 2003
+source: Tsurumaki, Yasuo. (2003). "Inaka" shachou no seikou keieijutu. IN Tsuushinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB36_00006.xml
+title: Amagasaki sumou monogatari
+date: 2003
+source: Inoue, Mariko. (2003). Amagasaki sumou monogatari. Kobe Shimbun Sougou Shuppan Sentaa.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB37_00050.xml
+title: Gojuu meetoru no senki
+date: 2003 
+source: Kosaka, Haruo. (2003). Gojuu meetoru no senki. Bungeisha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00009.xml
+title: Hisho: Hansho yuusha
+date: 2003
+source: Kouno, Taeko. (2003). Hisho: Hansho yuusha. Shinchousha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00010.xml

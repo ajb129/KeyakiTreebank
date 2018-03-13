@@ -1,0 +1,6 @@
+title: Kodomo no kansei ga tsukuru rika jugyou
+date: 2003
+source: Morimoto, Shinya. (2003). Kodomo no kansei ga tsukuru rika jugyou. Touyoukan Shuppansha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00037.xml

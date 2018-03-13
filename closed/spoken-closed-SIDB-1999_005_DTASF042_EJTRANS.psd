@@ -1,0 +1,5 @@
+( (IP-MAT (NP-SBJ *pro*) (INTJ ⛔) (INTJ ⛔) (NP-PRD (N ⛔⛔⛔⛔⛔)) (AX ⛔⛔)) (ID 1_spoken-closed-SIDB-1999_005_DTASF042_EJTRANS;00:08:230-00:09:369;0002;I;JP;01;001))
+( (IP-MAT (NP-SBJ *pro*) (INTJ ⛔⛔) (NP-PRD (PP (NP (NUMCLP (NUM ⛔⛔⛔) (CL ⛔))) (P ⛔⛔⛔) (P ⛔)) (N ⛔⛔)) (AX ⛔⛔)) (ID 2_spoken-closed-SIDB-1999_005_DTASF042_EJTRANS;00:20:173-00:22:183;0004;I;JP;01;003))
+( (IP-MAT (NP-SBJ *speaker*) (INTJ ⛔) (INTJ ⛔) (PP (NP (PP (NP (N ⛔⛔)) (P ⛔)) (N ⛔)) (P ⛔)) (VB ⛔⛔) (VB0 ⛔) (AX ⛔⛔)) (ID 3_spoken-closed-SIDB-1999_005_DTASF042_EJTRANS;00:30:124-00:32:145;0007;I;JP;01;005))
+( (IP-MAT (NP-SBJ *pro*) (INTJ ⛔⛔) (INTJ ⛔) (PP (IP-ADV (NP-SBJ (WPRO ⛔⛔) (P ⛔)) (ADVP (ADV ⛔⛔⛔⛔)) (VB ⛔) (AX ⛔⛔) (NEG ⛔)) (P ⛔⛔⛔⛔)) (SCON *) (NP-PRD (PP (NP (NPR ⛔⛔)) (P ⛔)) (WPRO ⛔⛔) (P ⛔)) (AX ⛔⛔)) (ID 4_spoken-closed-SIDB-1999_005_DTASF042_EJTRANS;00:38:789-00:39:121;0009;I;JP;01;007))
+( (IP-MAT (INTJ ⛔⛔) (ADJI ⛔⛔⛔⛔⛔) (VB2 ⛔⛔⛔) (AX ⛔⛔)) (ID 5_spoken-closed-SIDB-1999_005_DTASF042_EJTRANS;01:12:420-01:13:428;0015;I;JP;01;010))

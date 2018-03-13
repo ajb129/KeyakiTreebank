@@ -1,0 +1,126 @@
+title: Yami o aruku
+date: 2001 
+source: Nakano, Jun. (2001). Yami o aruku. Asupekuto. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB12_00001.xml
+title: Ohaka mandara
+date: 2004
+source: Ikeda, Ryouji. (2004). Ohaka mandara. Shinpuusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB48_00016.xml
+title: Hotaru no fune
+date: 2004
+source: Oshikawa, Kuniaki. (2004). Hotaru no fune. Kosaido Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB49_00005.xml
+title: Hachijuu nichikan sekai issyuu
+date: 2004
+source: Juuru Verunu --Eguti, Kiyoshi (trans.). (2004). Hachijuu nichikan sekai issyuu. Kadogawa Shoten.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB49_00007.xml
+title: Za Eejeento
+date: 2005
+source: Onizuka, Tadashi. (2005). Za Eejeento. Rabndomuhausu Kodansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB50_00003.xml
+title: Jibutsu hajimari no monogatari
+date: 2005
+source: Yoshimura, Akira. (2005). Jibutsu hajimari no monogatari. Chikuma Shoten.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB50_00012.xml
+title: Tokoshie no inochi o eru tame ni
+date: 2005
+source: Kajiwara, Kazuyoshi. (2005). Tokoshie no inochi o eru tame ni. JDC Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB51_00007.xml
+title: Oosaka Nara
+date: 2005
+source: Oonishi, Tokiko (ed.). (2005). Oosaka Nara. Hoshi no Wa Kai.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00013.xml
+title: Kyouyou kyouiku wa shika suru
+date: 2005
+source: Satou, Manabu. (2005). Kyouyou kyouiku wa shika suru. Toukyuusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00015.xml
+title: Hashiriowatte kangaeru
+date: 2005
+source: Takahata, Keiko. (2005). Hashiriowatte kangaeru. Senken Shimbunsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00055.xml
+title: Kuroshio no bunkashi
+date: 2005
+source: Hidaka, Umashi. (2005). Kuroshio no bunkashi. Nanpou Shinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00056.xml
+title: Ohaka mandara
+date: 2004
+source: Ikeda, Ryouji. (2004). Ohaka mandara. Shinpuusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB48_00016.xml
+title: Hotaru no fune
+date: 2004
+source: Oshikawa, Kuniaki. (2004). Hotaru no fune. Kosaido Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB49_00005.xml
+title: Hachijuu nichikan sekai issyuu
+date: 2004
+source: Juuru Verunu --Eguti, Kiyoshi (trans.). (2004). Hachijuu nichikan sekai issyuu. Kadogawa Shoten.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB49_00007.xml
+title: Za Eejeento
+date: 2005
+source: Onizuka, Tadashi. (2005). Za Eejeento. Rabndomuhausu Kodansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB50_00003.xml
+title: Jibutsu hajimari no monogatari
+date: 2005
+source: Yoshimura, Akira. (2005). Jibutsu hajimari no monogatari. Chikuma Shoten.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB50_00012.xml
+title: Tokoshie no inochi o eru tame ni
+date: 2005
+source: Kajiwara, Kazuyoshi. (2005). Tokoshie no inochi o eru tame ni. JDC Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB51_00007.xml
+title: Oosaka Nara
+date: 2005
+source: Oonishi, Tokiko (ed.). (2005). Oosaka Nara. Hoshi no Wa Kai.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00013.xml
+title: Kyouyou kyouiku wa shika suru
+date: 2005
+source: Satou, Manabu. (2005). Kyouyou kyouiku wa shika suru. Toukyuusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00015.xml
+title: Hashiriowatte kangaeru
+date: 2005
+source: Takahata, Keiko. (2005). Hashiriowatte kangaeru. Senken Shimbunsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00055.xml
+title: Kuroshio no bunkashi
+date: 2005
+source: Hidaka, Umashi. (2005). Kuroshio no bunkashi. Nanpou Shinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00056.xml

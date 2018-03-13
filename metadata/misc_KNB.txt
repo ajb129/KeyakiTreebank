@@ -1,0 +1,6 @@
+title: blog posts from KNB Corpus (Kyoto-University and NTT Blog Corpus) (Version 1.0)
+date: 2009/09/09
+source: Available from http://nlp.ist.i.kyoto-u.ac.jp/kuntt/KNBC_v1.0_090925.tar.bz2
+genre: blog
+details: Chikara Hashimoto, Sadao Kurohashi, Daisuke Kawahara, Keiji Shinzato and Masaaki Nagata. 2011. Construction of a Blog Corpus with Syntactic, Anaphoric, and Sentiment Annotations [in Japanese], Journal of Natural Language Processing, Vol 18, No. 2, pp. 175-201.
+terms of use: Copyright (c) 2009, 京都大学大学院情報学研究科黒橋研究室. All Rights Reserved.

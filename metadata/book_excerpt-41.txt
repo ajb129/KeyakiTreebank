@@ -1,0 +1,6 @@
+title: Hotaru no fune
+date: 2004
+source: Oshikawa, Kuniaki. (2004). Hotaru no fune. Kosaido Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB49_00005.xml

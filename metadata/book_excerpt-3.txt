@@ -1,0 +1,126 @@
+title: Reinousha
+date: 2001 
+source: Tenkyou, Shougyoku. (2001). Reinousha. Goma Bukkusu. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB11_00021.xml
+title: Shachougyou, daikou shimasu
+date: 2004
+source: Noda, Eiichi. (2004). Shachougyou, daikou shimasu. Asa Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00054.xml
+title: Kigyou no shakaiteki sekinin
+date: 2004
+source: Andoree Kaataa and  Jan Furanseezu-Rojji --Imai Shouta (trans.). (2004). Kigyou no shakaiteki sekinin. Gijutsu Keizai Kenkyuujo. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00060.xml
+title: Iryouhoujin iryouseikyou no kaikei kaikaku
+date: 2004
+source: Morikawa, Kazuyuki. (2004). Iryouhoujin iryouseikyou no kaikei kaikaku. Doujidaisha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB44_00050.xml
+title: Kore made no shikkusushiguma wa wasurenasai
+date: 2004
+source: Maki, Kazutoshi. (2004). Kore made no shikkusushiguma wa wasurenasai. Daiyamondosha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00020.xml
+title: Fukkatsu! Nihon no handoutai sangyou
+date: 2004
+source: Oomi, Tadahiro. (2004). Fukkatsu! Nihon no handoutai sangyou. Zaikai Kenkyuusyo.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00024.xml
+title: Shimpen Juukyoron
+date: 2004
+source: Yamamoto, Riken. (2004). Shimpen Juukyoron. Heibonsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00051.xml
+title: Tsuji Shizuo korekushon
+date: 2004
+source: Tsuji, Shizuo. (2004). Tsuji Shizuo korekushon. Chikuma Shobou. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00077.xml
+title: Shoubai no "keikaku jissen kenshou"
+date: 2004
+source: Miyazaki, Fumiaki. (2004). Shoubai no "keikaku jissen kenshou" Shougyoukai.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB46_00066.xml
+title: Sekai ni kaketa nanairo no obi
+date: 2004
+source: Yoshida, Ikuko. (2004). Sekai ni kaketa nanairo no obi. Surugadai Shuppansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB47_00014.xml
+title: Tamashi no moyuru mamani
+date: 2004
+source: Isadora Duncan --Yamagawa, Akiko and Yamagawa (2004). Tamashi no moyuru mamani. Fuzambo Intaanashonaru.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB47_00045.xml
+title: Shachougyou, daikou shimasu
+date: 2004
+source: Noda, Eiichi. (2004). Shachougyou, daikou shimasu. Asa Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00054.xml
+title: Kigyou no shakaiteki sekinin
+date: 2004
+source: Andoree Kaataa and  Jan Furanseezu-Rojji --Imai Shouta (trans.). (2004). Kigyou no shakaiteki sekinin. Gijutsu Keizai Kenkyuujo. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00060.xml
+title: Iryouhoujin iryouseikyou no kaikei kaikaku
+date: 2004
+source: Morikawa, Kazuyuki. (2004). Iryouhoujin iryouseikyou no kaikei kaikaku. Doujidaisha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB44_00050.xml
+title: Kore made no shikkusushiguma wa wasurenasai
+date: 2004
+source: Maki, Kazutoshi. (2004). Kore made no shikkusushiguma wa wasurenasai. Daiyamondosha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00020.xml
+title: Fukkatsu! Nihon no handoutai sangyou
+date: 2004
+source: Oomi, Tadahiro. (2004). Fukkatsu! Nihon no handoutai sangyou. Zaikai Kenkyuusyo.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00024.xml
+title: Shimpen Juukyoron
+date: 2004
+source: Yamamoto, Riken. (2004). Shimpen Juukyoron. Heibonsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00051.xml
+title: Tsuji Shizuo korekushon
+date: 2004
+source: Tsuji, Shizuo. (2004). Tsuji Shizuo korekushon. Chikuma Shobou. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00077.xml
+title: Shoubai no "keikaku jissen kenshou"
+date: 2004
+source: Miyazaki, Fumiaki. (2004). Shoubai no "keikaku jissen kenshou" Shougyoukai.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB46_00066.xml
+title: Sekai ni kaketa nanairo no obi
+date: 2004
+source: Yoshida, Ikuko. (2004). Sekai ni kaketa nanairo no obi. Surugadai Shuppansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB47_00014.xml
+title: Tamashi no moyuru mamani
+date: 2004
+source: Isadora Duncan --Yamagawa, Akiko and Yamagawa (2004). Tamashi no moyuru mamani. Fuzambo Intaanashonaru.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB47_00045.xml

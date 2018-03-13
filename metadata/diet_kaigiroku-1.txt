@@ -1,0 +1,119 @@
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/091/0440/09103130440010a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM11_00001.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/118/0001/11802270001001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM33_00001.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/128/0260/12810200260001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM41_00005.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/144/0440/14411270440001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM51_00009.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/sangiin/140/1380/14001241380001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM55_00005.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/156/0020/15601200020001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM61_00007.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/154/0022/15407160022008a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM62_00002.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/sangiin/159/0017/15903310017011a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM65_00001.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/sangiin/154/0001/15403290001013a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM67_00001.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/118/0001/11802270001001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM33_00001.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/128/0260/12810200260001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM41_00005.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/144/0440/14411270440001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM51_00009.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/sangiin/140/1380/14001241380001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM55_00005.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/156/0020/15601200020001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM61_00007.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/154/0022/15407160022008a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM62_00002.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/sangiin/159/0017/15903310017011a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM65_00001.xml
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/sangiin/154/0001/15403290001013a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM67_00001.xml

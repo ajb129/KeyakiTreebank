@@ -1,0 +1,6 @@
+title: SE to shite ikinuku waza
+date: 2004
+source: Nakamori, Yuuto. (2004). SE to shite ikinuku waza. Nihon nouritu kyoukai manejimento sentaa.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB40_00003.xml

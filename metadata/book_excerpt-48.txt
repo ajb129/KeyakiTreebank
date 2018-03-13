@@ -1,0 +1,6 @@
+title: Hashiriowatte kangaeru
+date: 2005
+source: Takahata, Keiko. (2005). Hashiriowatte kangaeru. Senken Shimbunsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00055.xml

@@ -1,0 +1,6 @@
+title: Kigyou no shakaiteki sekinin
+date: 2004
+source: Andoree Kaataa and  Jan Furanseezu-Rojji --Imai Shouta (trans.). (2004). Kigyou no shakaiteki sekinin. Gijutsu Keizai Kenkyuujo. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00060.xml

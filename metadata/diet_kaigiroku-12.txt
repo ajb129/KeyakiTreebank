@@ -1,0 +1,7 @@
+title: Kokkai kaigiroku
+date: 2014
+source: http://kokkai.ndl.go.jp/SENTAKU/syugiin/144/0440/14411270440001a.html
+genre: spoken
+subcorpus: diet
+terms of use: Public domain
+# BCCWJ link: OM51_00009.xml

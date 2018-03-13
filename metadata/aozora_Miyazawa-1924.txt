@@ -1,0 +1,7 @@
+title: Chuumon no ooi ryouriten
+author: Miyazawa, Kenji
+date: 1924
+source: Aozora Bunko (http://www.aozora.gr.jp/cards/000081/card43754.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

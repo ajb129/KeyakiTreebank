@@ -1,0 +1,126 @@
+title: Jinsei, kangaesuginai hou ga ii
+date: 2001
+source: Fujiwara Touen. (2001). Jinsei, kangaesuginai hou ga ii. Daiwa Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB11_00013.xml
+title: Hatouken
+date: 2003 
+source: Ueda, Hideto. (2003). Hatouken. Tokuma Shoten. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00013.xml
+title: Doko ni itatte futsuu no seikatsu
+date: 2003
+source: Matsumoto, You. (2003). Doko ni itatte futsuu no seikatsu. Nigensha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00017.xml
+title: Kiddonappu tsuaa
+date: 2003 
+source: Tsunoda, Mitsuyo. (2003). Kiddonappu tsuaa. Shinchousha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00023.xml
+title: Joshin
+date: 2003 
+source: Kuze, Teruhiko. (2003). Joshin. Shinchousha.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00024.xml
+title: SE to shite ikinuku waza
+date: 2004
+source: Nakamori, Yuuto. (2004). SE to shite ikinuku waza. Nihon nouritu kyoukai manejimento sentaa.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB40_00003.xml
+title: Housekibako
+date: 2004
+source: Oda, Norie. (2004). Housekibako. Shinpuusha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB40_00035.xml
+title: Indo
+date: 2004
+source: Hinomoto, Yuriko. (2004). Indo. Sekifusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB42_00003.xml
+title: Teikoku Hoteru chuubou monogatari
+date: 2004
+source: Murakami, Nobuo. (2004). Teikoku Hoteru chuubou monogatari. Nihon Keizai Shimbunsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB42_00014.xml
+title: Jugyouryoku
+date: 2004
+source: Imaizumi, Hiroshi and Iwanabe, Taiji. (2004). Jugyouryoku. Junposha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00001.xml
+title: Bengoshi Muumin no kaiketsu! Onna no ichidaiji
+date: 2004
+source: Satou, Mutumi. (2004). Bengoshi Muumin no kaiketsu! Onna no ichidaiji. Shuueisha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00044.xml
+title: Hatouken
+date: 2003 
+source: Ueda, Hideto. (2003). Hatouken. Tokuma Shoten. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00013.xml
+title: Doko ni itatte futsuu no seikatsu
+date: 2003
+source: Matsumoto, You. (2003). Doko ni itatte futsuu no seikatsu. Nigensha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00017.xml
+title: Kiddonappu tsuaa
+date: 2003 
+source: Tsunoda, Mitsuyo. (2003). Kiddonappu tsuaa. Shinchousha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00023.xml
+title: Joshin
+date: 2003 
+source: Kuze, Teruhiko. (2003). Joshin. Shinchousha.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00024.xml
+title: SE to shite ikinuku waza
+date: 2004
+source: Nakamori, Yuuto. (2004). SE to shite ikinuku waza. Nihon nouritu kyoukai manejimento sentaa.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB40_00003.xml
+title: Housekibako
+date: 2004
+source: Oda, Norie. (2004). Housekibako. Shinpuusha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB40_00035.xml
+title: Indo
+date: 2004
+source: Hinomoto, Yuriko. (2004). Indo. Sekifusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB42_00003.xml
+title: Teikoku Hoteru chuubou monogatari
+date: 2004
+source: Murakami, Nobuo. (2004). Teikoku Hoteru chuubou monogatari. Nihon Keizai Shimbunsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB42_00014.xml
+title: Jugyouryoku
+date: 2004
+source: Imaizumi, Hiroshi and Iwanabe, Taiji. (2004). Jugyouryoku. Junposha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00001.xml
+title: Bengoshi Muumin no kaiketsu! Onna no ichidaiji
+date: 2004
+source: Satou, Mutumi. (2004). Bengoshi Muumin no kaiketsu! Onna no ichidaiji. Shuueisha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00044.xml

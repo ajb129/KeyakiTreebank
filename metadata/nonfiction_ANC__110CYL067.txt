@@ -1,0 +1,4 @@
+title: translation of Goodwill fund-raising letter
+source: American National Corpus MASC project (http://www.anc.org/data/masc/)
+genre: non-fiction
+terms of use: fair usePublic domain

@@ -2,5 +2,4 @@ title: Examples from the Tanaka Corpus
 date: 2008
 source: http://www.edrdg.org/wiki/index.php/Tanaka_Corpus
 genre: textbook
-subcorpus: textbook examples
 terms of use: Creative Commons CC-BY licence

@@ -1,0 +1,6 @@
+title: Jugyouryoku
+date: 2004
+source: Imaizumi, Hiroshi and Iwanabe, Taiji. (2004). Jugyouryoku. Junposha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00001.xml

@@ -1,0 +1,6 @@
+title: Subtitle data from Ken Robinson at TED2006: Do schools kill creativity?
+date: 2006/02
+source: Available from https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.
+genre: translated
+subcorpus: translated subtitles
+terms of use: Creative Commons Share-Alike Attribution Non-Commercial License.

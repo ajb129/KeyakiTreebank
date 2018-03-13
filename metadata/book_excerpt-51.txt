@@ -1,0 +1,5 @@
+title: Umezawa Takeshi zenshuu
+date: 2001
+source: Umezawa Takeshi. (2001). Umezawa Takeshi zenshuu. Shogakkan.
+genre: bookpublished book
+# BCCWJ link: PB10_00047.xml

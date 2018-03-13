@@ -1,6 +1,5 @@
 title: Content sourced from the Japanese Law Translation Database System (Ministry of Justice) 
 date: 2012/05/10
 source: Japanese Law Translation Database System http://www.japaneselawtranslation.go.jp/law/detail_main?id=130
-genre: Law
-subcorpus: Law corpus
+genre: law
 terms of use: Copyright © 2017 Ministry of Justice, Japan. All Rights Reserved. (http://www.japaneselawtranslation.go.jp/index/terms_of_use)

@@ -1,0 +1,5 @@
+( (IP-IMP (NP-SBJ *hearer*) (PP (NP (N ⛔⛔⛔⛔⛔)) (P ⛔)) (NP-OB1 *を*) (VB ⛔⛔) (VB0 ⛔) (P ⛔) (VB2 ⛔⛔⛔⛔)) (ID 1_spoken-closed-SIDB-1999_014_DTASF092_JTRANS;00:01:548-00:03:606;0002;JP;01;***))
+( (CP-QUE (IP-SUB (PP (NP (PP (NP (N ⛔⛔)) (P ⛔)) (N ⛔⛔)) (P ⛔)) (NP-SBJ *) (NP-PRD (WPRO ⛔)) (AX ⛔⛔)) (P ⛔)) (ID 2_spoken-closed-SIDB-1999_014_DTASF092_JTRANS;00:01:548-00:03:606;0002;JP;02;***))
+( (CP-QUE (IP-SUB (PP (NP (N ⛔⛔) (N ⛔⛔)) (P ⛔)) (NP-SBJ *) (PP (NP (WPRO ⛔⛔)) (P ⛔⛔⛔)) (NP-PRD *) (AX ⛔⛔)) (P ⛔)) (ID 3_spoken-closed-SIDB-1999_014_DTASF092_JTRANS;00:07:661-00:07:871;0003;JP;01;***))
+( (CP-QUE (IP-SUB (PP (NP (N ⛔⛔⛔)) (P ⛔)) (NP-SBJ *) (PP (NP (WPRO ⛔⛔⛔)) (P ⛔)) (NP-OB1 *に*) (VB ⛔⛔) (AX ⛔⛔)) (P ⛔)) (ID 4_spoken-closed-SIDB-1999_014_DTASF092_JTRANS;00:25:967-00:31:429;0006;JP;01;***))
+( (FRAG (CONJ ⛔⛔) (ADVP (ADV ⛔⛔⛔))) (ID 5_spoken-closed-SIDB-1999_014_DTASF092_JTRANS;00:25:967-00:31:429;0006;JP;01;***))

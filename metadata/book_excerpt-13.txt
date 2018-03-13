@@ -1,0 +1,6 @@
+title: Bengoushi to no tsukiaikata kangaemasu
+date: 2003
+source: Kubouchi, Suburu. (2003). Bengoushi to no tsukiaikata kangaemasu. Uejji. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00083.xml

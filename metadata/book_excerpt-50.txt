@@ -1,0 +1,6 @@
+title: Shougaisha fukushi seido kaikaku nani ga mondai ka
+date: 2005
+source: Higashikawa, Etsuko. (2005). Shougaisha fukushi seido kaikaku nani ga mondai ka. Zenkoku Shougaisha Mondai Kenkyuukai Shuppanbu.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00081.xml

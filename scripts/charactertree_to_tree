@@ -78,13 +78,22 @@ TSCRIPT=${TMP:-"/tmp"}/output_tscript$$
 
 # create tsurgeon script for collapsing characters back to words
 cat > "${TSCRIPT}" << EOF
+%%%%%%%%%%%%%%%%%%%%%%
+% remove +
 /^\+\$/=x < (__ !< __)
 
 excise x x
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% merge characters
+__=x \$ (__=y !< __)
+  
+relabel x /^.*\$/={x}={y}/
+delete y
+
 EOF
 
-$(dirname $0)/tsurgeon_script "${TSCRIPT}" --together
+$(dirname $0)/tsurgeon_script "${TSCRIPT}"
 
 # clean things up
 rm "${TSCRIPT}"

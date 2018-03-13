@@ -1,7 +1,7 @@
-Keyaki Treebank (Version 1.0)
+Keyaki Treebank (Version 1.1)
 =============================
 
-Thanks for your interest in the first release of the Keyaki Treebank.
+Thanks for your interest in this release of the Keyaki Treebank.
 
 The Keyaki Treebank is a parsed corpus that aims to instantiate a coherent
 descriptive grammar of the Japanese language, allowing searches for
@@ -18,8 +18,7 @@ Contents of this File
 (B) Recovering the full data
 (C) Citation
 (D) Contributors
-(E) Changelog
-(F) Licence
+(E) Licence
 
 
 (A) Corpus Format
@@ -83,48 +82,43 @@ When presenting research results taken from this treebank, please be
 sure to include a citation in the following form:
 
 Alastair Butler, Kei Yoshimoto, Shota Hiyama, Stephen Wright Horn,
-Iku Nagasaki, and Ai Kubota. 2017. The Keyaki Treebank Parsed Corpus,
-Version 1.0 (http://www.compling.jp/Keyaki/ accessed YYYY/MM/DD).
+Iku Nagasaki, and Ai Kubota. 2018. The Keyaki Treebank Parsed Corpus,
+Version 1.1 (http://www.compling.jp/Keyaki/ accessed YYYY/MM/DD).
 
 
 (D) Contributors
 ================
 
-Alastair Butler (National Institute for Japanese Language and Linguistics)
+Alastair Butler (Hirosaki University)
 Kei Yoshimoto (Tohoku University)
 Shota Hiyama (Tohoku University)
 Stephen Wright Horn (National Institute for Japanese Language and Linguistics)
 Iku Nagasaki (National Institute for Japanese Language and Linguistics)
 Ai Kubota (National Institute for Japanese Language and Linguistics)
-Makoto Orikasa (Sophia University)
 Ken Kishiyama (University of Tokyo)
+Makoto Orikasa (Sophia University)
 Noritugu Hayashi (University of Tokyo),
 Ruriko Otomo (University of Hong Kong)
 Tomoya Kosuge (Tohoku University)
 Shinya Okano (University of Tokyo)
 Yumiko Kinjo (National Institute for Japanese Language and Linguistics)
 Ryosuke Sato (Tohoku University)
-Yusuke Kubota (University of Tsukuba)
 Takumi Toda (Tohoku University)
 Tsaiwei Fang (Tohoku University)
+Yusuke Kubota (University of Tsukuba)
 Yoshiko Ookubo (JSA)
 Y. Ueda (JSA)
-Kyoko Fujii (International Christian University)
-Ayumi Nobuki (International Christian University)
 Natsuha Katakura (Tohoku University)
 
 
-(E) Changelog
-=============
-
-Initial release (v1.0)
-
-
-(F) Licence
+(E) Licence
 ===========
 
-This work is licensed under the Creative Commons Attribution
-4.0 International License. To view a copy of this license, visit
-http://creativecommons.org/licenses/by/4.0/ or send a letter to
-Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+The corpus annotation (the grammatical analysis) is licensed under
+the Creative Commons Attribution 4.0 International License. To view a copy
+of this license, visit http://creativecommons.org/licenses/by/4.0/ or send
+a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+The unannotated corpus material belongs to the authors and publishers
+as detailed in the metadata.
 

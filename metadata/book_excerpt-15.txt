@@ -1,0 +1,6 @@
+title: Ekohausu ni sumitai
+date: 2003
+source: Nakano, Hiroshi. (2003). Ekohausu ni sumitai. Arachi Suppansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB35_00013.xml

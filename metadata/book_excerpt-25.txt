@@ -1,0 +1,6 @@
+title: Housekibako
+date: 2004
+source: Oda, Norie. (2004). Housekibako. Shinpuusha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB40_00035.xml

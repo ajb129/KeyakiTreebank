@@ -1,6 +1,5 @@
 title: Wikipedia article
 date: 2013/08/09
 source: ダイヤモンドは砕けない-Wikipedia.html
-genre: Wikipedia
-subcorpus: Wikipedia general
+genre: wikipedia
 terms of use: Creative Commons Attribution-ShareAlike License 3.0

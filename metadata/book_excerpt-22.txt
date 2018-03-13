@@ -1,0 +1,6 @@
+title: Kiddonappu tsuaa
+date: 2003 
+source: Tsunoda, Mitsuyo. (2003). Kiddonappu tsuaa. Shinchousha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB39_00023.xml

@@ -1,0 +1,6 @@
+title: Indo
+date: 2004
+source: Hinomoto, Yuriko. (2004). Indo. Sekifusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB42_00003.xml

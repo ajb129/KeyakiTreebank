@@ -1,0 +1,6 @@
+title: Jibutsu hajimari no monogatari
+date: 2005
+source: Yoshimura, Akira. (2005). Jibutsu hajimari no monogatari. Chikuma Shoten.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB50_00012.xml

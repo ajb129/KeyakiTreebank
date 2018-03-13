@@ -1,0 +1,6 @@
+title: "Inaka" shachou no seikou keieijutu
+date: 2003
+source: Tsurumaki, Yasuo. (2003). "Inaka" shachou no seikou keieijutu. IN Tsuushinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB36_00006.xml

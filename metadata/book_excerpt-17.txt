@@ -1,0 +1,6 @@
+title: Amagasaki sumou monogatari
+date: 2003
+source: Inoue, Mariko. (2003). Amagasaki sumou monogatari. Kobe Shimbun Sougou Shuppan Sentaa.  
+genre: book
+terms of use: fair use
+# BCCWJ link: PB37_00050.xml

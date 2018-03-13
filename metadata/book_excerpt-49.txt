@@ -1,0 +1,6 @@
+title: Kuroshio no bunkashi
+date: 2005
+source: Hidaka, Umashi. (2005). Kuroshio no bunkashi. Nanpou Shinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00056.xml

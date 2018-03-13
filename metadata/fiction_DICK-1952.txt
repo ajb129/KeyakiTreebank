@@ -1,0 +1,8 @@
+title: translation of "The Gun" by Philip K. Dick
+date: 2017
+genre: fiction
+source title: The Gun
+source author: Philip K. Dick
+source date: 1952
+source: Planet Stories September 1952 edition; Project Gutenberg, June 15, 2009. Produced by Greg Weeks, Stephen Blundell and the Online Distributed Proofreading Team (http://www.gutenberg.org/ebooks/29132)
+terms of use: Creative Commons license

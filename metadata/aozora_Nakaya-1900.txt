@@ -1,0 +1,7 @@
+title: Hikaku kagakuron
+author: Nakaya, Ukichirou
+date: 1959
+source: Aozora Bunko (http://www.aozora.gr.jp/cards/001569/card53214.html)
+genre: fiction
+subcorpus: Aozora Bunko
+terms of use: Creative Commons license

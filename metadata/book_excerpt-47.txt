@@ -1,0 +1,6 @@
+title: Kyouyou kyouiku wa shika suru
+date: 2005
+source: Satou, Manabu. (2005). Kyouyou kyouiku wa shika suru. Toukyuusha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB53_00015.xml

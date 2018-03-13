@@ -1,0 +1,6 @@
+title: Ikaruga no takumi Miyadaiku sandai
+date: 2003
+source: Nishioka, Tsunekazu and Aoyama, Shigeru. (2003). Ikaruga no takumi Miyadaiku sandai. Heibonsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB35_00005.xml

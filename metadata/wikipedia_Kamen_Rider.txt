@@ -1,0 +1,5 @@
+title: Wikipedia article
+date: 2013/08/07
+source: 仮面ライダーWikipedia.html
+genre: wikipedia
+terms of use: Creative Commons Attribution-ShareAlike License 3.0

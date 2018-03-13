@@ -1,4 +1,8 @@
-title: translation of "The House that Jack Built"
-genre: example
-subcorpus: misc
-terms of use: Public domain
+title: translation of "The House that Jack Built" by Randolph Caldecott
+genre: misc
+data: 2015
+source title: The House that Jack Built. One of R. Caldecott's Picture Books.
+source author: Randolph Caldecott
+source date: 1878
+source: FREDERICK WARNE & CO. Ltd. edition; Project Gutenberg, April 22, 2004. Produced by Suzanne Shell, Linda Cantoni and PG Distributed Proofreaders (http://www.gutenberg.org/ebooks/12109)
+terms of use: Creative Commons license

@@ -1,0 +1,6 @@
+title: Shimpen Juukyoron
+date: 2004
+source: Yamamoto, Riken. (2004). Shimpen Juukyoron. Heibonsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB45_00051.xml

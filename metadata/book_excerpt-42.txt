@@ -1,0 +1,6 @@
+title: Hachijuu nichikan sekai issyuu
+date: 2004
+source: Juuru Verunu --Eguti, Kiyoshi (trans.). (2004). Hachijuu nichikan sekai issyuu. Kadogawa Shoten.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB49_00007.xml

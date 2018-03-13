@@ -15,7 +15,16 @@ SYNOPSIS
 
 DESCRIPTION
       This wrapper script runs stanford-tregex.jar in the tsurgeon mode
-      as a filter changing stdin.  A tsurgeon script name must be supplied.
+      as a filter changing stdin.  At least one tsurgeon script must be
+      supplied.
+
+      A tsurgeon script is a file containing a list of pattern and
+      transformation operation list pairs.  That is, it is a sequence of
+      pairs of a Tregex pattern on one or more lines, then a blank line
+      (empty or whitespace), then a list of transformation operations
+      one per line to apply when the pattern is matched, and then
+      another blank line (empty or whitespace).  Note the need for blank
+      lines: The code crashes if they are not present as separators.
 
       The character % introduces a comment that extends to the end of the
       line.  All other intended uses of % must be escaped as \% .
@@ -43,15 +52,12 @@ END
 while test $# -gt 0 ; do
   case "$1" in
 
-      --together)     # bring multiple daughters without a child together
-         TOGETHER=1 ; shift 1 ;;
-
-      -*)             # show this help message
+      -*)   # show this help message
          help_information
          see_also
          exit ;;
 
-      *)              # file name from where to source the tsurgeon script content
+      *)    # file name from where to source the tsurgeon script content
          INPUT="${INPUT} $1" ; shift ;;
  
   esac
@@ -62,30 +68,8 @@ done
 # script starts here #
 ######################
 
-function possibly_place_sisters_together () {
-
-if test "${TOGETHER}"; then
-
-sed 's/ /\n/g; s/)/\n)/g' | \
-awk '
-
-NF==0 || /\(/ || /\)/ { printf("%s\n", $0) ; next }
-
-{ printf("%s", $0) }
-
-' | munge-trees -w
-
-else
-
-cat
-
-fi
-
-}
-
-
-TEMP=${TMP:-"/tmp"}/output_t1$$
-SCRIPT=${TMP:-"/tmp"}/output_t2$$
+TEMP=${TMP:-"/tmp"}/output_t$$
+SCRIPT=${TMP:-"/tmp"}/output_s$$
 
 # collect input
 cat > "${TEMP}"
@@ -116,8 +100,7 @@ remove_all != 0	{ next }
 if test $(cat "${SCRIPT}" | wc -l) -eq 0; then cat "${TEMP}"; else
 
 # run tsurgeon
-java -mx300m -cp "${TREGEX}" edu.stanford.nlp.trees.tregex.tsurgeon.Tsurgeon -treeFile "${TEMP}" "${SCRIPT}" -s | \
-possibly_place_sisters_together
+java -mx300m -cp "${TREGEX}" edu.stanford.nlp.trees.tregex.tsurgeon.Tsurgeon -treeFile "${TEMP}" "${SCRIPT}" -s
 
 rm "${SCRIPT}"
 

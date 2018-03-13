@@ -1,0 +1,6 @@
+title: Sekai ni kaketa nanairo no obi
+date: 2004
+source: Yoshida, Ikuko. (2004). Sekai ni kaketa nanairo no obi. Surugadai Shuppansha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB47_00014.xml

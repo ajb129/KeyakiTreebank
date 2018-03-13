@@ -3,9 +3,8 @@
   (ID 1_misc_description;JP))
 
 ( (IP-MAT (PP (NP (N コーパス))
-              (P と)
-              (P は))
-          (NP-SBJ *と*)
+              (P とは))
+          (NP-SBJ *)
           (PU 、)
           (NP-PRD (IP-REL (NP-SBJ *pro*)
                           (IP-ADV (PP (NP (IP-REL (NP-SBJ *T*)

@@ -100,6 +100,9 @@ while test $# -gt 0 ; do
       --edit)          # echo edit number and file command
          EDIT=1 ; shift ;;
 
+      --show)          # echo location of file
+         SHOW=1 ; shift ;;
+
       --look)          # collect words
          LOOK="${LOOK}$2" ; DO1=1 ; shift 2 ;;
 
@@ -133,7 +136,7 @@ if test ${EXTENSION}; then
 else
   cat
 fi | \
-LC_ALL=UTF-8 sort | awk '{ print NR, gensub(/^.*\//, "", 1, $0) }'
+LC_ALL=UTF-8 sort | awk '{ print NR, gensub(/\.[^.]*$/, "", 1, gensub(/^.*\//, "", 1, $0)) }'
 
 exit
 
@@ -177,6 +180,10 @@ if test ${EDIT}; then
       BEGIN=$(echo ${NUM2} | sed 's/,.*//')
       echo "vim +/\\s${BEGIN}_ ${i}"
     fi
+  done
+elif test ${SHOW}; then
+  for i in ${DATA}; do
+    echo "$i"
   done
 else
 

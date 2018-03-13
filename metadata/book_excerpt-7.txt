@@ -1,0 +1,6 @@
+title: Inochi o sukue! Ai to yuujou no dorama
+date: 2001
+source: Hirohata, Eriko. (2001). Inochi o sukue! Ai to yuujou no dorama. NHK "Purojekuto X" Chuubunsha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB1n_00024.xml

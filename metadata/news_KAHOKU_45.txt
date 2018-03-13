@@ -1,0 +1,18 @@
+title: Kahoku Shimpo newspaper article
+date: 2014/06/11
+source: K201406110A0T30XX00001
+genre: news
+subcorpus: KAHOKU SHIMPO
+terms of use: by permission of KAHOKU SHIMPO PUBLISHING CO. (c)
+title: Kahoku Shimpo newspaper article
+date: 2014/01/01
+source: K201401010W5XPAXX00001
+genre: news
+subcorpus: KAHOKU SHIMPO
+terms of use: by permission of KAHOKU SHIMPO PUBLISHING CO. (c)
+title: Kahoku Shimpo newspaper article
+date: 2014/01/01
+source: K201401010W5XPAXX00001
+genre: news
+subcorpus: KAHOKU SHIMPO
+terms of use: by permission of KAHOKU SHIMPO PUBLISHING CO. (c)

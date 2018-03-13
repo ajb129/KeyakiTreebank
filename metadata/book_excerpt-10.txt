@@ -1,0 +1,6 @@
+title: Sheera hime no bouken umi no oukan
+date: 2002
+source: Murayama, Saki. (2002). Sheera hime no bouken umi no oukan. Doushinsha. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB2n_00003.xml

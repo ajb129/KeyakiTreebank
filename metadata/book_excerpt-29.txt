@@ -1,0 +1,6 @@
+title: Bengoshi Muumin no kaiketsu! Onna no ichidaiji
+date: 2004
+source: Satou, Mutumi. (2004). Bengoshi Muumin no kaiketsu! Onna no ichidaiji. Shuueisha.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00044.xml

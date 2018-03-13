@@ -1,0 +1,6 @@
+title: Shachougyou, daikou shimasu
+date: 2004
+source: Noda, Eiichi. (2004). Shachougyou, daikou shimasu. Asa Shuppan. 
+genre: book
+terms of use: fair use
+# BCCWJ link: PB43_00054.xml

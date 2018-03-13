@@ -1,0 +1,6 @@
+title: Zettai shippai shinai maihoomu kounyuu daimanzoku gaidobukku
+date: 2003
+source: Rakuraku mochiie iinkai. (2003). Zettai shippai shinai maihoomu kounyuu daimanzoku gaidobukku. Jouhou Sentaa Shuppankyoku.
+genre: book
+terms of use: fair use
+# BCCWJ link: PB33_00046.xml
